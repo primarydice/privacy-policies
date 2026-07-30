@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>かわせるん プライバシーポリシー</title>
-<meta name="description" content="通貨換算アプリ「かわせるん」(Android アプリ / Web版)のプライバシーポリシーです。">
+<meta name="description" content="通貨換算アプリ「かわせるん」(Android アプリ)のプライバシーポリシーです。">
 <style>
   :root { color-scheme: light dark; }
   body {
@@ -51,24 +51,25 @@
 <body>
 
 <h1>かわせるん プライバシーポリシー</h1>
-<p class="meta">対象アプリ: かわせるん(Android アプリ および Web 版 / PWA)</p>
+<p class="meta">対象アプリ: かわせるん(Android アプリ)</p>
 <p class="meta">提供者(デベロッパー): Primary Dice</p>
 <p class="meta">制定日: 2026年7月30日 / 最終更新日: 2026年7月30日</p>
 
-<p>本プライバシーポリシー(以下「本ポリシー」)は、上記提供者(以下「当方」)が提供する通貨換算アプリケーション「かわせるん」(Android アプリおよび Web 版。以下「本アプリ」)における、利用者の情報の取り扱いについて定めるものです。Android 版は、Web 版のページをそのままアプリとして表示する仕組み(TWA/WebView)で提供しており、データの取り扱いは Web 版と同一です。本アプリをご利用いただく前に、本ポリシーをお読みください。本アプリをインストールまたはご利用になった場合、本ポリシーの内容に同意いただいたものとみなします。</p>
+<p>本プライバシーポリシー(以下「本ポリシー」)は、上記提供者(以下「当方」)が提供する通貨換算アプリケーション「かわせるん」(以下「本アプリ」)における、利用者の情報の取り扱いについて定めるものです。本アプリは、画面を表示するためのファイル一式をアプリ内部に同梱しており、端末内で完結して動作します。本アプリをご利用いただく前に、本ポリシーをお読みください。本アプリをインストールまたはご利用になった場合、本ポリシーの内容に同意いただいたものとみなします。</p>
 
 <div class="box">
   <h3>このポリシーの要点(3行まとめ)</h3>
   <ul>
     <li>本アプリは<strong>当方のサーバーを一切持たず</strong>、利用者の入力内容や個人情報を当方や第三者へ送信することはありません。</li>
     <li>アカウント登録は不要で、氏名・メールアドレス・電話番号・位置情報などの<strong>個人を識別する情報は一切取得しません</strong>。</li>
+    <li>端末内に保存されるのは<strong>為替レートのキャッシュ</strong>と<strong>入力途中の内容</strong>だけで、いずれも端末の外へ出ることはありません。</li>
     <li>広告の配信、アクセス解析、行動追跡(トラッキング)は<strong>一切行いません</strong>。</li>
   </ul>
 </div>
 
 <h2>1. 本アプリが取り扱う情報</h2>
 
-<p>本アプリが端末内(ブラウザまたはアプリのストレージ)で取り扱う情報は、以下のとおりです。</p>
+<p>本アプリが端末内(アプリのストレージ)で取り扱う情報は、以下のとおりです。</p>
 
 <table>
   <thead>
@@ -84,31 +85,49 @@
       <td class="wrap">為替レートのキャッシュ</td>
       <td class="wrap">外部の為替レート提供サービスから取得した、通貨ごとの交換レートの数値と取得時刻</td>
       <td class="wrap">アプリ起動時、またはオフライン時に前回取得した値を使う必要があるとき</td>
-      <td class="wrap">端末内のみ(ブラウザ/アプリのローカルストレージ)</td>
+      <td class="wrap">端末内のみ(アプリのローカルストレージ)</td>
+    </tr>
+    <tr>
+      <td class="wrap">入力中の内容(一時的なもの)</td>
+      <td class="wrap">入力途中の金額・単価・個数、および選択中の通貨の組み合わせ</td>
+      <td class="wrap">アプリの使用中(画面を切り替えても入力内容が消えないようにするため)</td>
+      <td class="wrap">端末内のみ(アプリのセッションストレージ)。<strong>アプリを完全に終了すると自動的に消去されます。</strong></td>
     </tr>
   </tbody>
 </table>
+
+<div class="box note">
+  <h3>入力した金額の取り扱いについて</h3>
+  <p style="margin-bottom:0">入力した金額は、アプリを使用している間だけ端末内に一時保存されます。これは、画面を回転させたり他のアプリに切り替えたりしても入力内容が消えないようにするための仕組みです。この情報が当方や第三者へ送信されることは一切なく、アプリを完全に終了した時点で端末から自動的に消去されます。履歴として蓄積されることもありません。</p>
+</div>
 
 <h3>本アプリが取得しない情報</h3>
 <p>本アプリは、以下の情報を取得・収集・送信しません。</p>
 <ul>
   <li>氏名、生年月日、性別、住所、電話番号、メールアドレスなどの個人を識別できる情報</li>
   <li>アカウント情報(本アプリはログイン機能自体がありません)</li>
-  <li>入力した金額や、換算した通貨の組み合わせなどの利用履歴(端末内にも保存しません)</li>
+  <li>入力した金額や換算内容の<strong>履歴</strong>(過去の計算内容を蓄積・記録することはありません)</li>
   <li>位置情報(GPS)、連絡先、カメラ、通話履歴、SMS、カレンダー</li>
-  <li>広告 ID、デバイス ID、IP アドレス等の識別子</li>
+  <li>広告 ID、デバイス ID 等の識別子</li>
   <li>アプリの利用状況・操作ログ・クラッシュレポート等の解析データ</li>
 </ul>
+<p>なお、上記の情報はいずれも当方のサーバーへ送信されません(当方はサーバーを保有していません)。</p>
 
 <h2>2. 情報の利用目的</h2>
 <p>本アプリは、取り扱う情報を以下の目的にのみ使用します。これ以外の目的で利用することはありません。</p>
 <ul>
   <li>通貨の換算レートを表示するため</li>
   <li>オフライン時や通信できないときに、前回取得したレートを使って換算を継続できるようにするため(キャッシュ)</li>
+  <li>アプリの使用中に、画面の切り替えなどで入力途中の内容が消えないようにするため</li>
 </ul>
 
 <h2>3. 端末の権限とネットワーク通信</h2>
-<p>本アプリは、カメラ・位置情報・連絡先・通知など、個人を特定しうる端末の権限は使用しません。使用するのはネットワーク通信のみで、目的は下記のとおりです。</p>
+<p>本アプリは、カメラ・位置情報・連絡先・通知など、個人を特定しうる端末の権限は使用しません。使用する権限は、以下の 2 つのみです。</p>
+<ul>
+  <li><code>INTERNET</code>(インターネット通信) — 為替レートを取得するために使用します。</li>
+  <li><code>ACCESS_NETWORK_STATE</code>(通信状態の確認) — 圏外や機内モードかどうかを判定し、その場合に通信を試みず保存済みのレートを表示するために使用します。通信の<strong>内容</strong>を読み取るものではありません。</li>
+</ul>
+<p>ネットワーク通信の内容は下記のとおりです。</p>
 
 <table>
   <thead>
@@ -126,6 +145,8 @@
     </tr>
   </tbody>
 </table>
+
+<p>なお、インターネット通信という仕組み上、接続元の IP アドレスなど一般的な通信記録が、通信先である外部サービス側に残る場合があります。これは当方が取得・保存するものではなく、当方から参照することもできません。外部サービスにおける取り扱いは、下記「5. 本アプリが利用している第三者サービス」および同サービスの規約をご参照ください。</p>
 
 <h2>4. 第三者への提供・共有</h2>
 <p>当方は、本アプリで取り扱う情報を、法令に基づく場合を除き、第三者に提供・開示・販売・貸与することはありません。そもそも当方がこれらのデータを受け取る仕組みが存在しないため、提供の余地がありません。</p>
@@ -156,15 +177,17 @@
 </table>
 
 <h2>6. データの保持期間と削除方法</h2>
-<p>当方はデータを保持しません。端末内に保存されるのは為替レートのキャッシュのみで、保持・削除は利用者ご自身の管理下にあります。</p>
+<p>当方はデータを保持しません。端末内に保存されるデータの保持・削除は、すべて利用者ご自身の管理下にあります。</p>
 <ul>
-  <li><strong>キャッシュを削除する場合:</strong> ブラウザの設定からサイトデータ(Cookie・キャッシュ)を削除するか、Android 版の場合は端末の「設定」→「アプリ」→「かわせるん」→「ストレージ」→「データを消去」を実行してください。</li>
-  <li><strong>アンインストールする場合:</strong> Android 版をアンインストールすると、端末内に保存されたキャッシュはすべて削除されます。</li>
+  <li><strong>入力途中の内容:</strong> アプリを完全に終了した時点で、端末から自動的に消去されます。利用者による操作は不要です。</li>
+  <li><strong>為替レートのキャッシュ:</strong> 新しいレートを取得するたびに上書きされます。すぐに削除したい場合は、端末の「設定」→「アプリ」→「かわせるん」→「ストレージ」→「データを消去」を実行してください。</li>
+  <li><strong>アンインストールする場合:</strong> 本アプリをアンインストールすると、端末内に保存されたデータはすべて削除されます。</li>
 </ul>
 
 <h2>7. 安全管理措置</h2>
 <ul>
-  <li>本アプリのデータは、ブラウザまたは Android のアプリサンドボックス(アプリごとにデータ領域を分離する仕組み)によって保護され、他のアプリから直接アクセスできません。</li>
+  <li>本アプリのデータは、Android のアプリサンドボックス(アプリごとにデータ領域を分離する仕組み)によって保護され、他のアプリから直接アクセスできません。</li>
+  <li>外部サービスとの通信は、暗号化された HTTPS 接続で行っています。</li>
   <li>当方はデータを預からないため、当方側の情報漏えいによって利用者のデータが流出することはありません。</li>
 </ul>
 
@@ -172,7 +195,7 @@
 <p>本アプリは、13歳未満のお子様を対象として特別に設計されたものではありませんが、個人を識別する情報を一切収集しないため、お子様が利用した場合においても、当方がお子様の個人情報を取得することはありません。</p>
 
 <h2>9. 利用者の権利</h2>
-<p>本アプリのデータはすべて利用者の端末内(為替レートのキャッシュのみ)にあり、当方は保有していません。そのため、データの削除は、いつでも利用者ご自身の操作で行っていただけます(前記「6. データの保持期間と削除方法」をご参照ください)。</p>
+<p>本アプリのデータはすべて利用者の端末内にあり、当方は保有していません。そのため、データの削除は、いつでも利用者ご自身の操作で行っていただけます(前記「6. データの保持期間と削除方法」をご参照ください)。当方が個人情報を保有していないため、開示・訂正・利用停止等のご請求の対象となるデータもありません。</p>
 
 <h2>10. データの国外移転</h2>
 <p>当方は利用者のデータを収集・保管しないため、当方による国外へのデータ移転は発生しません。ただし、為替レートを取得する際、外部サービス(ExchangeRate-API)の海外サーバーと通信が発生します。この通信で送信される情報に、個人を識別する情報は含まれません。</p>
@@ -191,13 +214,15 @@
 
 <div class="en">
 <h2>Privacy Policy (English Summary)</h2>
-<p>This is an English summary of the privacy policy for <strong>Kawaserun</strong>, a currency conversion app (Android app and Web/PWA version), provided by <strong>Primary Dice</strong> ("the developer"). The Android version is a wrapped version of the same web page (TWA/WebView) and shares identical data handling with the Web version. The Japanese text above is the authoritative version.</p>
+<p>This is an English summary of the privacy policy for <strong>Kawaserun</strong>, a currency conversion Android app provided by <strong>Primary Dice</strong> ("the developer"). All display files are bundled inside the app and run locally on your device. The Japanese text above is the authoritative version.</p>
 <ul>
-  <li><strong>No data collection by the developer.</strong> Kawaserun has no backend server of its own. The only data stored is a local cache of currency exchange rates (rate values and the time they were fetched), kept solely on your device/browser so the app keeps working offline.</li>
-  <li><strong>No personal identifiers.</strong> The app does not require an account and does not collect names, email addresses, phone numbers, location data, contacts, camera access, device identifiers, or advertising IDs. Amounts you enter and conversion history are not stored.</li>
-  <li><strong>Network access.</strong> The app contacts ExchangeRate-API (open.er-api.com) solely to fetch current exchange rates. Only a standard rate-lookup request is sent; no personal information or entered amounts are transmitted. This request goes to a server outside Japan.</li>
+  <li><strong>No data collection by the developer.</strong> Kawaserun has no backend server of its own. Nothing you do in the app is transmitted to the developer.</li>
+  <li><strong>What is stored on your device.</strong> Two things only: (1) a cache of currency exchange rates (rate values and fetch time), so the app keeps working offline; and (2) your in-progress input (amounts and selected currencies), held temporarily so your entry is not lost when you switch screens. The latter is <strong>automatically erased when you fully close the app</strong>. Neither ever leaves your device, and no history of past conversions is kept.</li>
+  <li><strong>No personal identifiers.</strong> The app does not require an account and does not collect names, email addresses, phone numbers, location data, contacts, camera access, device identifiers, or advertising IDs.</li>
+  <li><strong>Permissions.</strong> Only <code>INTERNET</code> (to fetch rates) and <code>ACCESS_NETWORK_STATE</code> (to detect whether you are offline). Neither reads the content of your communications.</li>
+  <li><strong>Network access.</strong> The app contacts ExchangeRate-API (open.er-api.com) solely to fetch current exchange rates over HTTPS. Only a standard rate-lookup request is sent; no personal information or entered amounts are transmitted. This request goes to a server outside Japan, and as with any internet request, standard connection records such as your IP address may be retained by that third-party service. The developer neither collects nor can access those records.</li>
   <li><strong>No ads, no analytics, no tracking.</strong></li>
-  <li><strong>Deletion.</strong> Clear your browser's site data, or on Android clear the app's storage via Settings → Apps → Kawaserun → Storage, or uninstall the app, to remove the cached rate data.</li>
+  <li><strong>Deletion.</strong> In-progress input clears itself when you close the app. To clear cached rates, go to Settings → Apps → Kawaserun → Storage → Clear data, or uninstall the app.</li>
   <li><strong>Children.</strong> The app is not specifically directed to children under 13 and collects no personal information from any user.</li>
   <li><strong>Contact:</strong> <a href="mailto:primarydice-develop@yahoo.co.jp">primarydice-develop@yahoo.co.jp</a></li>
 </ul>
