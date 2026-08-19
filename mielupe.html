@@ -64,7 +64,7 @@
     <li><strong>カメラの映像は、どこにも保存されません。</strong>写真や動画として記録する機能そのものがありません。映像は画面に表示するためだけに使われ、表示が終われば消えます。</li>
     <li>本アプリは<strong>当方のサーバーを一切持たず</strong>、カメラの映像や利用者の情報を当方や第三者へ送信することはありません。</li>
     <li>アカウント登録は不要で、氏名・メールアドレス・電話番号・位置情報などの<strong>個人を識別する情報は一切取得しません</strong>。</li>
-    <li>端末内に保存されるのは<strong>映像の向きの設定(数値ひとつ)</strong>だけです。</li>
+    <li>端末内に保存されるのは<strong>映像の向きの設定(数値ひとつ)</strong>だけです。本アプリは Android の自動バックアップを<strong>無効に設定している</strong>ため、これが Google ドライブへ保存されたり、機種変更時に他の端末へコピーされたりすることもありません。</li>
     <li><strong>本アプリは広告を表示します。</strong>広告は Google の配信サービス(Google AdMob)によるもので、広告を出すために Google が<strong>広告 ID</strong> などを取得します。<strong>カメラの映像が広告に使われることはありません。</strong>詳しくは「4. 広告の表示と、第三者への情報の提供」をご覧ください。</li>
     <li>アクセス解析ツールの組み込みや、当方による行動追跡(トラッキング)は<strong>行いません</strong>。</li>
   </ul>
@@ -260,9 +260,9 @@
 </ul>
 
 <h2>7. 端末のバックアップについて</h2>
-<p>Android には、アプリのデータを自動的に Google ドライブへ控えておく「自動バックアップ」の仕組みがあります。本アプリではこの仕組みが有効になっているため、<strong>映像の向きの設定(<code>0</code>・<code>90</code>・<code>180</code>・<code>270</code> のいずれかの数値ひとつ)</strong>が Google ドライブへ控えられ、機種変更時に新しい端末へ引き継がれる場合があります。</p>
-<p><strong>カメラの映像はそもそも保存されないため、バックアップの対象になりようがありません。</strong>バックアップされうるのは上記の数値だけであり、個人を識別できる情報は含まれません。</p>
-<p>端末の自動バックアップそのものは、Android の「設定」→「Google」→「バックアップ」からいつでも無効にできます。</p>
+<p>Android には、アプリのデータを自動的に Google ドライブへ控えておく「自動バックアップ」の仕組みと、機種変更のときにデータを新しい端末へ引き継ぐ仕組みがあります。</p>
+<p><strong>本アプリは、この両方を無効に設定しています。</strong>そのため、端末内に保存された映像の向きの設定が、Google ドライブへ送られたり、他の端末へコピーされたりすることはありません。<strong>カメラの映像はそもそも保存されないため、バックアップの対象になりようがありません。</strong>前記「1. 本アプリが取り扱う情報」に記載したデータは、すべてその端末の中だけに存在します。</p>
+<p>機種変更をされた場合、新しい端末では映像の向きが初期値に戻ります。利用者に不利益となる情報の消失はありません。</p>
 
 <h2>8. 安全管理措置</h2>
 <ul>
@@ -280,10 +280,9 @@
 <p>本アプリのデータはすべて利用者の端末内にあり、当方は保有していません。そのため、データの削除は、いつでも利用者ご自身の操作で行っていただけます(前記「6. データの保持期間と削除方法」をご参照ください)。当方が個人情報を保有していないため、開示・訂正・利用停止等のご請求の対象となるデータもありません。</p>
 
 <h2>11. データの国外移転</h2>
-<p>当方は利用者のデータを収集・保管しないため、当方による国外へのデータ移転は発生しません。ただし、以下の通信は海外のサーバーとの間で発生します。</p>
+<p>当方は利用者のデータを収集・保管しないため、当方による国外へのデータ移転は発生しません。また、前記「7. 端末のバックアップについて」のとおり自動バックアップを無効にしているため、端末内のデータが国外のサーバーへ控えられることもありません。ただし、以下の通信は海外のサーバーとの間で発生します。</p>
 <ul>
   <li><strong>広告の取得(Google):</strong> 前記「4. 広告の表示と、第三者への情報の提供」に記載した情報が、Google の海外サーバーへ送信され、同社により国外で処理される場合があります。取り扱いは<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google プライバシーポリシー</a>によります。</li>
-  <li><strong>端末の自動バックアップ(Google):</strong> 前記「7. 端末のバックアップについて」の数値ひとつが、Google ドライブの海外サーバーへ控えられる場合があります。</li>
 </ul>
 
 <h2>12. 本ポリシーの変更</h2>
@@ -305,7 +304,7 @@
   <li><strong>The camera image is never saved.</strong> The app has no capture or recording feature at all. Frames are processed in graphics memory and drawn straight to the screen, then discarded. Nothing is written to storage, your photo gallery, or anywhere else.</li>
   <li><strong>The "freeze" button is not a shutter.</strong> It simply holds the current frame in graphics memory so you can read it slowly. Nothing is stored, and it clears when you unfreeze or close the app.</li>
   <li><strong>No data collection by the developer.</strong> Mielupe has no backend server of its own. Nothing you do in the app is transmitted to the developer.</li>
-  <li><strong>What is stored on your device.</strong> One thing only: the image-rotation setting you choose with the on-screen "rotate" button — a single number (0, 90, 180, or 270). Nothing else.</li>
+  <li><strong>What is stored on your device.</strong> One thing only: the image-rotation setting you choose with the on-screen "rotate" button — a single number (0, 90, 180, or 270). Nothing else, and it never leaves the device.</li>
   <li><strong>No personal identifiers collected by the developer.</strong> The app does not require an account and the developer does not collect names, email addresses, phone numbers, location data, contacts, microphone audio, or files.</li>
   <li><strong>Camera permission.</strong> The app requests <code>CAMERA</code> permission when it starts the camera; without it the app cannot show anything. It is used solely to receive frames for on-screen magnification. The torch feature uses the camera flash and needs no extra permission. The microphone is never requested or used.</li>
   <li><strong>No text recognition or image analysis.</strong> The app does not run OCR and does not identify what is in view, so what you point the camera at is never derived or transmitted.</li>
@@ -314,7 +313,7 @@
   <li><strong>Permissions.</strong> The app itself uses <code>CAMERA</code> and <code>INTERNET</code> (to load ads). The Google Mobile Ads SDK additionally declares <code>AD_ID</code>, <code>ACCESS_ADSERVICES_AD_ID</code>, <code>ACCESS_ADSERVICES_ATTRIBUTION</code>, <code>ACCESS_ADSERVICES_TOPICS</code>, <code>ACCESS_NETWORK_STATE</code>, <code>WAKE_LOCK</code>, and <code>FOREGROUND_SERVICE</code>. Apart from <code>CAMERA</code>, none of these prompt for user approval, and the developer obtains no information through them.</li>
   <li><strong>Network access.</strong> The only network traffic the app makes is loading ads from Google's servers, which are outside Japan. Standard connection records such as your IP address may be retained by Google. The developer neither collects nor can access those records.</li>
   <li><strong>Third-party components.</strong> The Capacitor framework (<code>@capacitor/core</code>, <code>@capacitor/android</code>), AndroidX CameraX, Google AdMob (Google Mobile Ads SDK), and Google User Messaging Platform (the consent screen). No analytics, crash-reporting, or tracking SDKs are bundled.</li>
-  <li><strong>Backup.</strong> Android Auto Backup is enabled, so the single rotation number described above may be copied to your Google Drive and restored on a new device. The camera image is never saved and therefore can never be backed up. You can turn Auto Backup off under Settings → Google → Backup.</li>
+  <li><strong>Backups are disabled.</strong> The app explicitly opts out of Android Auto Backup and device-to-device transfer, so the rotation setting is never copied to Google Drive or to another device. The camera image is never saved and therefore can never be backed up either. After switching phones, the rotation setting simply returns to its default.</li>
   <li><strong>Deletion.</strong> To clear the stored setting, go to Settings → Apps → Mielupe → Storage → Clear data, or uninstall the app.</li>
   <li><strong>Children.</strong> The app is not directed to children under 13 and is listed on Google Play with a 13+ target audience. The developer collects no personal information from any user.</li>
   <li><strong>Contact:</strong> <a href="mailto:primarydice-develop@yahoo.co.jp">primarydice-develop@yahoo.co.jp</a></li>
