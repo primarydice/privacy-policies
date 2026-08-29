@@ -54,7 +54,7 @@
 <p class="meta">対象アプリ: レートハント(RATE HUNT / Android アプリ)</p>
 <p class="meta">パッケージ名: <code>app.primarydice.ratehunt</code></p>
 <p class="meta">提供者(デベロッパー): Primary Dice</p>
-<p class="meta">制定日: 2026年8月28日 / 最終更新日: 2026年8月28日</p>
+<p class="meta">制定日: 2026年8月28日 / 最終更新日: 2026年8月29日</p>
 
 <p>本プライバシーポリシー(以下「本ポリシー」)は、上記提供者(以下「当方」)が提供する両替所検索アプリケーション「レートハント」(以下「本アプリ」)における、利用者の情報の取り扱いについて定めるものです。本アプリは、海外の街ごとに「どこで両替すると手数料が少ないか」の目安をならべて示し、両替できるお店を地図と一覧で探せるアプリです。画面を表示するためのファイル一式とお店のデータはアプリ内部に同梱しており、基本的に端末内で完結して動作します。本アプリをご利用いただく前に、本ポリシーをお読みください。本アプリをインストールまたはご利用になった場合、本ポリシーの内容に同意いただいたものとみなします。</p>
 
@@ -236,8 +236,9 @@
   <li>広告 ID を削除すると、興味・関心に基づく広告(パーソナライズ広告)は表示されなくなります。<strong>広告そのものは引き続き表示されます</strong>が、利用者に合わせて選ばれることはなくなります。</li>
 </ul>
 
-<h3>EU・英国などにお住まいの方へ</h3>
-<p>EU、英国、スイスなど、法令により事前の同意が必要とされる地域では、広告を表示する前に同意を求める画面を表示します。同意された内容は、同じ画面からいつでも変更できます。</p>
+<h3>配信地域について</h3>
+<p><strong>本アプリは、日本国内のみで配信しています。</strong>そのため、EU、英国、スイスなど、広告の表示に先立つ同意取得が法令上求められる地域を対象とした同意画面(Google User Messaging Platform など)は組み込んでいません。</p>
+<p>将来これらの地域へ配信を広げる場合は、同意画面を組み込んだうえで、本ポリシーを改定し、ページ上部の「最終更新日」を更新します。</p>
 
 <h3>当方が行わないこと</h3>
 <p>当方は、本アプリで取り扱う情報を、法令に基づく場合を除き、第三者に提供・開示・販売・貸与することはありません。そもそも当方がこれらのデータを受け取る仕組みが存在しないため、提供の余地がありません。</p>
@@ -279,19 +280,14 @@
       <td class="wrap"><strong>アプリの利用中に通信は発生しません。</strong>当方があらかじめ取得・整理したうえでアプリに同梱しています。データの出典表示は <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap contributors</a> です。</td>
     </tr>
     <tr>
-      <td class="wrap">Capacitor(<code>@capacitor/core</code>、<code>@capacitor/app</code>、<code>@capacitor/browser</code>、<code>@capacitor/geolocation</code>)</td>
-      <td class="wrap">画面表示用のファイルを Android アプリとして動かすための土台。アプリが前面に戻ったことの検知、外部リンクを端末のブラウザで開くこと、および端末の位置情報を受け取ることに使用します。</td>
+      <td class="wrap">Capacitor(<code>@capacitor/core</code>、<code>@capacitor/app</code>、<code>@capacitor/browser</code>、<code>@capacitor/geolocation</code>、<code>@capacitor-community/admob</code>)</td>
+      <td class="wrap">画面表示用のファイルを Android アプリとして動かすための土台。アプリが前面に戻ったことの検知、外部リンクを端末のブラウザで開くこと、端末の位置情報を受け取ること、および Google の広告部品を呼び出すことに使用します。</td>
       <td class="wrap"><strong>データの送信はありません。</strong>いずれも端末内で動作する仕組みで、外部へ情報を送る機能を持ちません。位置情報は端末から本アプリへ渡されるだけです。</td>
     </tr>
     <tr>
       <td class="wrap">Google AdMob<br>(Google Mobile Ads SDK)</td>
       <td class="wrap">広告の表示</td>
       <td class="wrap">広告 ID・IP アドレス・端末情報などが Google へ送信されます。取り扱いについては<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google プライバシーポリシー</a>および<a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">AdMob のデータ利用に関する説明</a>をご参照ください。海外(米国など)のサーバーと通信します。</td>
-    </tr>
-    <tr>
-      <td class="wrap">Google User Messaging Platform(UMP)</td>
-      <td class="wrap">EU・英国などで、広告を表示する前に同意を求める画面を出すための仕組み</td>
-      <td class="wrap">同意した内容と、それを判定するための地域情報を扱います。氏名等の個人情報は扱いません。</td>
     </tr>
   </tbody>
 </table>
@@ -355,16 +351,16 @@
   <li><strong>Backups are disabled.</strong> The app explicitly opts out of Android Auto Backup and device-to-device transfer, so the data listed above is never copied to Google Drive or to another device. After switching phones, the city selection returns to its default and rates are simply fetched again.</li>
   <li><strong>No personal identifiers collected by the developer.</strong> The developer does not collect names, email addresses, phone numbers, contacts, camera access, location history, or any record of which shops you viewed.</li>
   <li><strong>The app shows ads.</strong> Ads supplied by <strong>Google AdMob</strong> are displayed. To serve them, Google receives your <strong>advertising ID</strong>, IP address (and the approximate region inferred from it), general device information (model, OS version, language, screen size), and records of ad impressions and clicks. <strong>The developer never receives, stores, or views any of this, and the location obtained by the app is never passed to advertising.</strong> See <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">Google's disclosure</a> and the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.</li>
-  <li><strong>Controlling ads.</strong> You can delete or reset your advertising ID at any time under Settings → Security &amp; privacy → More privacy settings → Ads. Doing so stops personalised ads; ads themselves continue to appear. In the EU, UK, and Switzerland, a consent screen is shown before ads are displayed, and your choices can be changed there at any time.</li>
+  <li><strong>Controlling ads.</strong> You can delete or reset your advertising ID at any time under Settings → Security &amp; privacy → More privacy settings → Ads. Doing so stops personalised ads; ads themselves continue to appear. <strong>The app is distributed in Japan only</strong>, so no consent flow for the EU, UK, or Switzerland (such as Google User Messaging Platform) is bundled; should distribution be extended to those regions, one will be added and this policy updated.</li>
   <li><strong>Permissions.</strong> The app itself uses <code>ACCESS_COARSE_LOCATION</code> and <code>ACCESS_FINE_LOCATION</code> (only on the explicit action described above) and <code>INTERNET</code> (to fetch rates, map tiles, and ads). The Google Mobile Ads SDK additionally declares <code>AD_ID</code>, <code>ACCESS_ADSERVICES_AD_ID</code>, <code>ACCESS_ADSERVICES_ATTRIBUTION</code>, <code>ACCESS_ADSERVICES_TOPICS</code>, <code>WAKE_LOCK</code>, and <code>FOREGROUND_SERVICE</code>. None of the latter prompt for user approval, and the developer obtains no information through them.</li>
   <li><strong>Network access.</strong> Over HTTPS, the app contacts ExchangeRate-API (open.er-api.com) for exchange rates, MapTiler (api.maptiler.com) for map tiles, and Google's servers for ads. The map-tile requests necessarily reveal <strong>which map area is on screen</strong> (as tile coordinates) to MapTiler; your actual latitude and longitude are not sent. External websites (Google Maps, OpenStreetMap, rate-comparison sites) open in your browser <strong>only when you tap a link</strong>, and are governed by their own policies. These services are outside Japan, and standard connection records such as your IP address may be retained by them. The developer neither collects nor can access those records.</li>
-  <li><strong>Third-party components.</strong> ExchangeRate-API, MapTiler, Leaflet (bundled, no network of its own), OpenStreetMap data (bundled at build time, not queried at runtime), the Capacitor framework (<code>@capacitor/core</code>, <code>@capacitor/app</code>, <code>@capacitor/browser</code>, <code>@capacitor/geolocation</code>), Google AdMob (Google Mobile Ads SDK), and Google User Messaging Platform (the consent screen). No analytics, crash-reporting, or tracking SDKs are bundled.</li>
+  <li><strong>Third-party components.</strong> ExchangeRate-API, MapTiler, Leaflet (bundled, no network of its own), OpenStreetMap data (bundled at build time, not queried at runtime), the Capacitor framework (<code>@capacitor/core</code>, <code>@capacitor/app</code>, <code>@capacitor/browser</code>, <code>@capacitor/geolocation</code>, <code>@capacitor-community/admob</code>), and Google AdMob (Google Mobile Ads SDK). No analytics, crash-reporting, or tracking SDKs are bundled.</li>
   <li><strong>About the figures shown.</strong> The fee estimates are the developer's own approximations based on published rates, not the actual rate of any individual shop, and the mid-market rate shown is not obtainable at any counter. Always check the posted rate before exchanging.</li>
   <li><strong>Deletion.</strong> Location is never stored. To clear the saved city, the intro flag, and cached rates, go to Settings → Apps → RATE HUNT → Storage → Clear data, or uninstall the app.</li>
   <li><strong>Children.</strong> The app is not directed to children under 13 and is listed on Google Play with a 13+ target audience. The developer collects no personal information from any user.</li>
   <li><strong>Contact:</strong> <a href="mailto:primarydice-develop@yahoo.co.jp">primarydice-develop@yahoo.co.jp</a></li>
 </ul>
-<p>Effective date: August 28, 2026. Last updated: August 28, 2026.</p>
+<p>Effective date: August 28, 2026. Last updated: August 29, 2026.</p>
 </div>
 
 </body>
