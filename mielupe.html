@@ -54,7 +54,7 @@
 <p class="meta">対象アプリ: ミエルーペ(Android アプリ)</p>
 <p class="meta">パッケージ名: <code>app.primarydice.mielupe</code></p>
 <p class="meta">提供者(デベロッパー): Primary Dice</p>
-<p class="meta">制定日: 2026年8月19日 / 最終更新日: 2026年8月19日</p>
+<p class="meta">制定日: 2026年8月19日 / 最終更新日: 2026年9月5日</p>
 
 <p>本プライバシーポリシー(以下「本ポリシー」)は、上記提供者(以下「当方」)が提供するカメラ拡大アプリケーション「ミエルーペ」(以下「本アプリ」)における、利用者の情報の取り扱いについて定めるものです。本アプリは、端末のカメラが写している映像をその場で拡大し、輪郭を強調して画面に表示するアプリです。画面を表示するためのファイル一式をアプリ内部に同梱しており、端末内で完結して動作します。本アプリをご利用いただく前に、本ポリシーをお読みください。本アプリをインストールまたはご利用になった場合、本ポリシーの内容に同意いただいたものとみなします。</p>
 
@@ -205,8 +205,8 @@
   <li>広告 ID を削除すると、興味・関心に基づく広告(パーソナライズ広告)は表示されなくなります。<strong>広告そのものは引き続き表示されます</strong>が、利用者に合わせて選ばれることはなくなります。</li>
 </ul>
 
-<h3>EU・英国などにお住まいの方へ</h3>
-<p>EU、英国、スイスなど、法令により事前の同意が必要とされる地域では、広告を表示する前に同意を求める画面を表示します。同意された内容は、同じ画面からいつでも変更できます。</p>
+<h3>配信地域について</h3>
+<p>本アプリは<strong>日本国内でのみ配信しています</strong>。EU、英国、スイスなど、広告の表示前に利用者の同意を得ることが法令で義務づけられている地域では配信していないため、同意を求める画面は表示しません。将来これらの地域へ配信を広げる場合は、同意を求める仕組みを組み込んだうえで、本ポリシーを改めます。</p>
 
 <h3>当方が行わないこと</h3>
 <p>当方は、本アプリで取り扱う情報を、法令に基づく場合を除き、第三者に提供・開示・販売・貸与することはありません。そもそも当方がこれらのデータを受け取る仕組みが存在しないため、提供の余地がありません。</p>
@@ -241,11 +241,6 @@
       <td class="wrap">Google AdMob<br>(Google Mobile Ads SDK)</td>
       <td class="wrap">広告の表示</td>
       <td class="wrap">広告 ID・IP アドレス・端末情報などが Google へ送信されます。取り扱いについては<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google プライバシーポリシー</a>および<a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">AdMob のデータ利用に関する説明</a>をご参照ください。海外(米国など)のサーバーと通信します。</td>
-    </tr>
-    <tr>
-      <td class="wrap">Google User Messaging Platform(UMP)</td>
-      <td class="wrap">EU・英国などで、広告を表示する前に同意を求める画面を出すための仕組み</td>
-      <td class="wrap">同意した内容と、それを判定するための地域情報を扱います。氏名等の個人情報は扱いません。</td>
     </tr>
   </tbody>
 </table>
@@ -309,16 +304,16 @@
   <li><strong>Camera permission.</strong> The app requests <code>CAMERA</code> permission when it starts the camera; without it the app cannot show anything. It is used solely to receive frames for on-screen magnification. The torch feature uses the camera flash and needs no extra permission. The microphone is never requested or used.</li>
   <li><strong>No text recognition or image analysis.</strong> The app does not run OCR and does not identify what is in view, so what you point the camera at is never derived or transmitted.</li>
   <li><strong>The app shows ads.</strong> Ads supplied by <strong>Google AdMob</strong> are displayed. To serve them, Google receives your <strong>advertising ID</strong>, IP address (and the approximate region inferred from it), general device information (model, OS version, language, screen size), and records of ad impressions and clicks. <strong>The developer never receives, stores, or views any of this. The camera image is never used for advertising.</strong> See <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">Google's disclosure</a> and the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.</li>
-  <li><strong>Controlling ads.</strong> You can delete or reset your advertising ID at any time under Settings → Security &amp; privacy → More privacy settings → Ads. Doing so stops personalised ads; ads themselves continue to appear. In the EU, UK, and Switzerland, a consent screen is shown before ads are displayed, and your choices can be changed there at any time.</li>
+  <li><strong>Controlling ads.</strong> You can delete or reset your advertising ID at any time under Settings → Security &amp; privacy → More privacy settings → Ads. Doing so stops personalised ads; ads themselves continue to appear. This app is distributed in Japan only and is not offered in the EU, UK, or Switzerland, so no consent screen is shown.</li>
   <li><strong>Permissions.</strong> The app itself uses <code>CAMERA</code> and <code>INTERNET</code> (to load ads). The Google Mobile Ads SDK additionally declares <code>AD_ID</code>, <code>ACCESS_ADSERVICES_AD_ID</code>, <code>ACCESS_ADSERVICES_ATTRIBUTION</code>, <code>ACCESS_ADSERVICES_TOPICS</code>, <code>ACCESS_NETWORK_STATE</code>, <code>WAKE_LOCK</code>, and <code>FOREGROUND_SERVICE</code>. Apart from <code>CAMERA</code>, none of these prompt for user approval, and the developer obtains no information through them.</li>
   <li><strong>Network access.</strong> The only network traffic the app makes is loading ads from Google's servers, which are outside Japan. Standard connection records such as your IP address may be retained by Google. The developer neither collects nor can access those records.</li>
-  <li><strong>Third-party components.</strong> The Capacitor framework (<code>@capacitor/core</code>, <code>@capacitor/android</code>), AndroidX CameraX, Google AdMob (Google Mobile Ads SDK), and Google User Messaging Platform (the consent screen). No analytics, crash-reporting, or tracking SDKs are bundled.</li>
+  <li><strong>Third-party components.</strong> The Capacitor framework (<code>@capacitor/core</code>, <code>@capacitor/android</code>), AndroidX CameraX, and Google AdMob (Google Mobile Ads SDK). No analytics, crash-reporting, or tracking SDKs are bundled.</li>
   <li><strong>Backups are disabled.</strong> The app explicitly opts out of Android Auto Backup and device-to-device transfer, so the rotation setting is never copied to Google Drive or to another device. The camera image is never saved and therefore can never be backed up either. After switching phones, the rotation setting simply returns to its default.</li>
   <li><strong>Deletion.</strong> To clear the stored setting, go to Settings → Apps → Mielupe → Storage → Clear data, or uninstall the app.</li>
   <li><strong>Children.</strong> The app is not directed to children under 13 and is listed on Google Play with a 13+ target audience. The developer collects no personal information from any user.</li>
   <li><strong>Contact:</strong> <a href="mailto:primarydice-develop@yahoo.co.jp">primarydice-develop@yahoo.co.jp</a></li>
 </ul>
-<p>Effective date: August 19, 2026. Last updated: August 19, 2026.</p>
+<p>Effective date: August 19, 2026. Last updated: September 5, 2026.</p>
 </div>
 
 </body>
