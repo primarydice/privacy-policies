@@ -8,6 +8,7 @@ Primary Dice が提供する各アプリの、プライバシーポリシーを�
 |---|---|---|
 | マネログ | `manelog.html` | https://primarydice.github.io/privacy-policies/manelog.html |
 | レートハント | `ratehunt.html` | https://primarydice.github.io/privacy-policies/ratehunt.html |
+| トリップキット | `tripkit.html` | https://primarydice.github.io/privacy-policies/tripkit.html |
 
 各アプリの URL は Google Play Console などのストアに登録します。**登録後はファイル名を変更しないでください。変更するとストアの掲載情報のリンクが切れます。**
 

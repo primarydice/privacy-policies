@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>トリップキット プライバシーポリシー</title>
+<meta name="description" content="Androidアプリ「トリップキット」(app.primarydice.tripkit)のプライバシーポリシーです。">
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    font-family: "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif;
+    max-width: 760px; margin: 0 auto; padding: 32px 18px 80px;
+    line-height: 1.9; color: #1e293b; background: #fff;
+    -webkit-text-size-adjust: 100%;
+  }
+  h1 { font-size: 25px; border-bottom: 3px solid #0f172a; padding-bottom: 10px; margin-bottom: 8px; }
+  h2 { font-size: 19px; margin-top: 40px; color: #0f172a; border-left: 5px solid #0f172a; padding-left: 10px; }
+  h3 { font-size: 16px; margin-top: 26px; color: #334155; }
+  p, li, td, th { font-size: 15px; }
+  .meta { color: #64748b; font-size: 13px; margin: 0 0 4px; }
+  .box { background: #f1f5f9; border: 1px solid #cbd5e1; border-radius: 8px; padding: 14px 18px; margin: 20px 0; }
+  .box.note { background: #fef9c3; border-color: #fde047; }
+  .box h3 { margin-top: 0; }
+  table { border-collapse: collapse; width: 100%; margin: 16px 0; display: block; overflow-x: auto; white-space: nowrap; }
+  th, td { border: 1px solid #cbd5e1; padding: 9px 12px; text-align: left; vertical-align: top; }
+  th { background: #f1f5f9; font-weight: 600; }
+  td.wrap, th.wrap { white-space: normal; min-width: 210px; }
+  ul { padding-left: 22px; }
+  li { margin-bottom: 6px; }
+  code { background: #f1f5f9; padding: 1px 5px; border-radius: 4px; font-size: 13px; }
+  .contact { background: #0f172a; color: #f8fafc; border-radius: 8px; padding: 18px 20px; }
+  .contact a { color: #93c5fd; }
+  hr { border: 0; border-top: 1px solid #e2e8f0; margin: 48px 0 32px; }
+  .en { color: #475569; font-size: 14px; }
+  .en h2 { font-size: 17px; }
+  @media (prefers-color-scheme: dark) {
+    body { color: #e2e8f0; background: #0f172a; }
+    h1 { border-bottom-color: #e2e8f0; }
+    h2 { color: #f1f5f9; border-left-color: #94a3b8; }
+    h3 { color: #cbd5e1; }
+    .meta, .en { color: #94a3b8; }
+    .box { background: #1e293b; border-color: #334155; }
+    .box.note { background: #422006; border-color: #a16207; }
+    th { background: #1e293b; }
+    th, td { border-color: #334155; }
+    code { background: #1e293b; }
+    hr { border-top-color: #334155; }
+  }
+</style>
+</head>
+<body>
+
+<h1>トリップキット プライバシーポリシー</h1>
+<p class="meta">対象アプリ: トリップキット(Android アプリ / パッケージ名 <code>app.primarydice.tripkit</code>)</p>
+<p class="meta">提供者(デベロッパー): Primary Dice</p>
+<p class="meta">制定日: 2026年9月8日 / 最終更新日: 2026年9月8日</p>
+
+<p>本プライバシーポリシー(以下「本ポリシー」)は、上記提供者(以下「当方」)が提供する Android アプリケーション「トリップキット」(以下「本アプリ」)における、利用者の情報の取り扱いについて定めるものです。本アプリは、海外旅行の準備と旅先での困りごとを助けるアプリで、したくリスト、到着ガイド、両替の計算、翻訳、使ったお金の記録、AI による行程表づくりと相談、旅の記録と日記の下書きの機能があります。本アプリをご利用いただく前に、本ポリシーをお読みください。本アプリをインストールしてご利用になった場合、本ポリシーの内容に同意いただいたものとみなします。</p>
+
+<div class="box">
+<h3>このポリシーの要点</h3>
+<ul>
+  <li><strong>旅の記録は、この端末の中だけに保存されます。</strong>行き先・日程・使ったお金・したくリスト・行程表・日記は、当方のサーバーへ送られません。当方は、利用者がどこへ行ったかを知る手段を持っていません。</li>
+  <li><strong>写真は、この端末から出ません。</strong>日記の下書きを作るとき、本アプリは選ばれた写真の「撮った時刻」だけを端末の中で読み取ります。写真そのものも、写真に記録されている撮影場所(GPS)も、どこへも送りません。</li>
+  <li><strong>位置情報の権限を一切要求しません。</strong>カメラの権限も、写真フォルダを読む権限も要求しません。</li>
+  <li><strong>アカウント登録は不要です。</strong>氏名・メールアドレス・電話番号など、個人を識別する情報は取得しません。</li>
+  <li><strong>AI と翻訳を使うときだけ、必要な文が外部へ送られます。</strong>当方が運用する中継サーバーを通り、AI(Anthropic 社)または翻訳サービス(Microsoft 社)へ渡ります。<strong>中継サーバーは、その中身を保存しません。</strong>詳しくは「3. AI と翻訳について」をご覧ください。</li>
+  <li><strong>当方のサーバーに残るのは、「あと何回つかえるか」の数だけです。</strong>端末ごとに割り当てた無作為な文字列と、残り回数だけを保存します。個人とは結び付きません。</li>
+  <li><strong>Android の自動バックアップを無効にしています。</strong>旅の記録が Google ドライブへ控えられたり、機種変更で別の端末へ自動的にコピーされたりすることはありません。</li>
+  <li><strong>本アプリは広告を表示します。</strong>Google AdMob によるもので、広告を出すために Google が広告 ID などを取得します。旅の記録や写真が広告に使われることはありません。</li>
+  <li>アクセス解析ツールの組み込みや、当方による行動追跡(トラッキング)は行いません。</li>
+</ul>
+</div>
+
+<h2>1. 本アプリが取り扱う情報</h2>
+
+<h3>端末の中だけに保存されるもの</h3>
+
+<p>以下はすべて、本アプリの領域(端末内のローカルストレージ)に保存されます。<strong>当方のサーバーへは送信されません。</strong></p>
+
+<table>
+<tr><th class="wrap">情報の種類</th><th class="wrap">具体的な内容</th><th class="wrap">取得のタイミング</th></tr>
+<tr>
+  <td class="wrap">いまの旅</td>
+  <td class="wrap">行き先として選んだ国と、出発日・帰国日</td>
+  <td class="wrap">利用者が「旅を作る」で入力したとき</td>
+</tr>
+<tr>
+  <td class="wrap">旅の記録</td>
+  <td class="wrap">終わった旅の一覧(行き先・日程・使ったお金・行程表・したくリストの済み具合・AI とのやりとり・日記)。最大30件</td>
+  <td class="wrap">旅が終わったとき、および次の旅を作ったとき</td>
+</tr>
+<tr>
+  <td class="wrap">使ったお金</td>
+  <td class="wrap">予算の金額と、記録した支出(種類・現地通貨の額・円換算の額・日時)</td>
+  <td class="wrap">利用者が支出を記録したとき</td>
+</tr>
+<tr>
+  <td class="wrap">したくリスト</td>
+  <td class="wrap">持ち物・手続きのチェック状況</td>
+  <td class="wrap">利用者がチェックしたとき</td>
+</tr>
+<tr>
+  <td class="wrap">行程表</td>
+  <td class="wrap">AI が作った旅程の文章</td>
+  <td class="wrap">行程表を作ったとき</td>
+</tr>
+<tr>
+  <td class="wrap">AI とのやりとり</td>
+  <td class="wrap">相談で入力した質問と、AI の答え</td>
+  <td class="wrap">相談したとき</td>
+</tr>
+<tr>
+  <td class="wrap">日記</td>
+  <td class="wrap">AI が作った日記の下書きと、利用者が書き直した文章</td>
+  <td class="wrap">日記を作ったとき・書き直して残したとき</td>
+</tr>
+<tr>
+  <td class="wrap">翻訳した文の控え</td>
+  <td class="wrap">訳した文と、その訳。圏外でももう一度読めるようにするため</td>
+  <td class="wrap">翻訳したとき</td>
+</tr>
+<tr>
+  <td class="wrap">為替レート</td>
+  <td class="wrap">外部サービスから取得した為替レートの一覧と、取得日時</td>
+  <td class="wrap">換算・予算の画面を開いたとき(6時間に1回まで)</td>
+</tr>
+<tr>
+  <td class="wrap">各種の設定</td>
+  <td class="wrap">お知らせのオン/オフ、換算で選んだ通貨、翻訳で選んだ言語</td>
+  <td class="wrap">利用者が設定したとき</td>
+</tr>
+<tr>
+  <td class="wrap">端末の印</td>
+  <td class="wrap">初回起動時に生成する、無作為な24文字の英数字。詳細は下記</td>
+  <td class="wrap">はじめて AI の機能を使ったとき</td>
+</tr>
+<tr>
+  <td class="wrap">残り回数の控え</td>
+  <td class="wrap">AI の行程表・相談が「あと何回つかえるか」の数と、旅パスの有効期限</td>
+  <td class="wrap">AI を使ったとき</td>
+</tr>
+</table>
+
+<div class="box">
+<h3>「端末の印」について</h3>
+<p>AI の利用回数を端末ごとに数えるために、本アプリは初回に<strong>無作為な24文字の英数字</strong>を作り、端末内に保存します。これは当方が乱数で作った文字列で、<strong>Android の端末 ID・広告 ID・電話番号・アカウントなど、端末や利用者を特定する情報とは一切結び付いていません。</strong>本アプリをアンインストールして入れ直すと、別の文字列に変わります。</p>
+<p>この印は、AI と回数に関する通信にのみ付きます。<strong>翻訳の通信には付きません。</strong></p>
+</div>
+
+<h3>当方のサーバー(中継サーバー)に保存されるもの</h3>
+
+<p>当方は、AI と翻訳を呼び出すための中継サーバー(<code>tripkit-worker.primarydice.workers.dev</code> / Cloudflare Workers 上で稼働)を運用しています。このサーバーに<strong>保存される</strong>のは、以下の2つだけです。</p>
+
+<table>
+<tr><th class="wrap">保存するもの</th><th class="wrap">内容</th><th class="wrap">保存期間</th></tr>
+<tr>
+  <td class="wrap">回数のさいふ</td>
+  <td class="wrap">上記の「端末の印」に対応する、行程表と相談の残り回数、旅パスの有効期限</td>
+  <td class="wrap">最後の更新から500日で自動的に消えます</td>
+</tr>
+<tr>
+  <td class="wrap">引き継ぎコード</td>
+  <td class="wrap">機種変更のために利用者が発行したコードと、対応する「端末の印」</td>
+  <td class="wrap">発行から500日で自動的に消えます</td>
+</tr>
+</table>
+
+<div class="box note">
+<h3>中継サーバーが保存しないもの</h3>
+<p>行き先の国、日程、行程表の内容、相談で入力した文章と AI の答え、翻訳した文、写真、写真の撮影時刻、日記の文章。これらは、AI や翻訳サービスへ渡すためにサーバーを<strong>通過する</strong>だけで、<strong>保存も記録もしていません。</strong>当方が動作確認のために残している記録は、処理にかかった文字数の合計だけで、内容は含みません。</p>
+</div>
+
+<h3>本アプリが取得しない情報</h3>
+<ul>
+  <li>氏名、生年月日、性別、住所、電話番号、メールアドレスなど、個人を識別できる情報</li>
+  <li>アカウント情報(本アプリにログイン機能はありません)</li>
+  <li><strong>位置情報(GPS)</strong> — 権限そのものを要求していません</li>
+  <li><strong>端末内の写真・動画・ファイルの一覧</strong> — 権限を要求していません。日記に使う写真は、Android の標準の選択画面で利用者が選んだものだけを、その場で読みます</li>
+  <li>連絡先、マイク(音声)、通話履歴、SMS、カレンダー</li>
+  <li>アプリの利用状況・操作ログ・クラッシュレポート等の解析データ</li>
+  <li>端末 ID、IMEI、MAC アドレスなどの端末固有の識別子</li>
+</ul>
+
+<h2>2. 写真と日記について</h2>
+
+<p>本アプリには、旅のあいだに撮った写真から日記の下書きを作る機能があります。写真は最も個人的な情報を含みうるものなので、この機能の仕組みを詳しくご説明します。</p>
+
+<div class="box note">
+<h3>★写真そのものは、この端末から一切出ません★</h3>
+<p>「写真をえらぶ」で選ばれた写真について、本アプリが行うのは次のことだけです。</p>
+<ul>
+  <li>写真ファイルの<strong>先頭の一部(約64キロバイト)だけ</strong>を端末の中で読みます。</li>
+  <li>そこに含まれる撮影情報(Exif)から、<strong>「撮った日時」だけ</strong>を取り出します。</li>
+  <li>取り出した日時を、<strong>「何日目の何時ごろに何枚」という数</strong>に変えます。</li>
+  <li>外部へ送るのは、この<strong>数だけ</strong>です。</li>
+</ul>
+<p><strong>写真の画像データは、いかなる形でも端末の外へ送信されません。</strong>また、写真に記録されていることのある<strong>撮影場所(GPS 座標)は、読み取りも送信もしません。</strong>撮影場所を扱うと、どこへ行ったかが当方や第三者に伝わることになり、「旅の記録はこの端末の中だけ」という本アプリの方針と矛盾するためです。</p>
+<p>読み取った写真は端末内のメモリ上で処理され、複製も保存もされません。日記を作ったあと、本アプリの中に写真は残りません。</p>
+</div>
+
+<h3>日記を作るときに外部へ送られる情報</h3>
+<p>日記の下書きを作るとき、中継サーバーを経由して AI へ送られるのは以下だけです。</p>
+<ul>
+  <li>行き先として選ばれた国(例:「タイ」)</li>
+  <li>何日目の何時ごろに何枚撮ったか、という枚数と時刻の数</li>
+  <li>その日に記録した支出の種類と金額(例:「食事 3,000円」)</li>
+  <li>その日の行程表の文章(旅の前に AI が作ったもの)</li>
+  <li>端末の印(残り回数を数えるため)</li>
+</ul>
+<p>AI は写真を見ていません。そのため、できあがるのは「日記」ではなく<strong>「日記の下書き」</strong>です。写っているものの説明や、行程表にない地名を書かないよう AI に指示していますが、AI の文章は事実と異なることがあります。内容は必ずご自身でお確かめのうえ、書き直してお使いください。</p>
+
+<h2>3. AI と翻訳について</h2>
+
+<p>本アプリの「行程表を作る」「AI に相談」「日記の下書き」「翻訳」は、インターネット上のサービスを使います。<strong>本アプリからこれらのサービスへ直接つながることはなく、必ず当方の中継サーバーを経由します。</strong>これは、サービスを使うための鍵をアプリの中に入れずに済ませるための仕組みです。</p>
+
+<table>
+<tr><th class="wrap">機能</th><th class="wrap">外部へ送られる情報</th><th class="wrap">渡す先</th></tr>
+<tr>
+  <td class="wrap">行程表を作る</td>
+  <td class="wrap">行き先の国、日程の日数、選んだ旅のこのみ(食べ歩き中心など)、1日の予算のめやす、端末の印</td>
+  <td class="wrap">Anthropic (Claude API)</td>
+</tr>
+<tr>
+  <td class="wrap">AI に相談</td>
+  <td class="wrap">利用者が入力した質問の文、行き先の国、旅の何日目か、その日つかえる金額のめやす、その日の行程表、それまでのやりとり、端末の印</td>
+  <td class="wrap">Anthropic (Claude API)</td>
+</tr>
+<tr>
+  <td class="wrap">日記の下書き</td>
+  <td class="wrap">「2. 写真と日記について」に記載のとおり</td>
+  <td class="wrap">Anthropic (Claude API)</td>
+</tr>
+<tr>
+  <td class="wrap">翻訳(文字を入力)</td>
+  <td class="wrap">訳したい文と、訳す言語。<strong>端末の印は付きません</strong></td>
+  <td class="wrap">Microsoft Azure Translator</td>
+</tr>
+<tr>
+  <td class="wrap">翻訳(カメラで撮る)</td>
+  <td class="wrap">読み取った<strong>文字だけ</strong>と、訳す言語。<strong>撮った画像は送られません</strong></td>
+  <td class="wrap">Microsoft Azure Translator</td>
+</tr>
+</table>
+
+<div class="box">
+<h3>カメラで撮った画像について</h3>
+<p>「カメラで撮る」で撮影した画像から文字を読み取る処理(OCR)は、<strong>端末の中だけで完結します。</strong>Google の ML Kit の、端末内で動く文字認識の部品を同梱しており、画像をインターネットへ送ることはありません。撮影した画像は読み取りのために一時的にアプリ内の作業領域へ書き出され、<strong>読み取りが終わり次第、自動的に削除されます。</strong>外部へ送られるのは、読み取られた文字だけです。</p>
+</div>
+
+<div class="box note">
+<h3>お願い</h3>
+<p>相談の文や、訳したい文には、<strong>氏名・住所・電話番号・クレジットカード番号・パスポート番号などを入力しないでください。</strong>これらを入力すると、その文がそのまま外部のサービスへ渡ります。当方はこれらの内容を保存しませんが、送られた先での取り扱いは各社のポリシーによります。</p>
+</div>
+
+<p>渡した先での取り扱いについては、<a href="https://www.anthropic.com/legal/privacy" target="_blank" rel="noopener">Anthropic のプライバシーポリシー</a>および<a href="https://privacy.microsoft.com/privacystatement" target="_blank" rel="noopener">Microsoft のプライバシーステートメント</a>をご参照ください。いずれも海外(米国等)のサーバーで処理されます。</p>
+
+<h2>4. 情報の利用目的</h2>
+<p>本アプリは、取り扱う情報を以下の目的にのみ使用します。これ以外の目的で利用することはありません。</p>
+<ul>
+  <li>したくリスト、到着ガイド、両替の計算、翻訳、使ったお金の記録など、本アプリの機能を提供するため</li>
+  <li>行程表・相談・日記の下書きを AI に作らせるため</li>
+  <li>AI を使える回数を端末ごとに数え、旅パスを購入された方に正しく回数をお渡しするため</li>
+  <li>機種変更のときに、購入された回数を新しい端末へ引き継ぐため</li>
+  <li>出発前のお知らせ(したくリストの確認)を、選ばれた時期にお届けするため</li>
+  <li>広告を表示し、本アプリを無料でお使いいただけるようにするため</li>
+</ul>
+
+<h2>5. 端末の権限とネットワーク通信</h2>
+
+<h3>利用者に許可を求める権限</h3>
+<ul>
+  <li><strong>POST_NOTIFICATIONS(通知)</strong> — 出発の30日前・2週間前・1週間前・前日の朝に、したくリストの確認をお知らせするために使用します。<strong>お知らせを最初にオンにするときに、はじめて許可を求めます。</strong>許可しない場合もお知らせが届かないだけで、他の機能はすべてお使いいただけます。お知らせの内容は端末内で組み立てており、外部へ送信されません。</li>
+</ul>
+
+<div class="box">
+<h3>要求していない権限</h3>
+<p>本アプリは、以下の権限を<strong>要求していません。</strong></p>
+<ul>
+  <li><strong>位置情報(ACCESS_FINE_LOCATION / ACCESS_COARSE_LOCATION)</strong> — 旅行アプリですが、現在地は使いません。</li>
+  <li><strong>カメラ(CAMERA)</strong> — 「カメラで撮る」は、端末に元から入っているカメラアプリを呼び出す方式のため、本アプリ自身がカメラの権限を持つ必要がありません。</li>
+  <li><strong>写真・ファイルの読み取り(READ_MEDIA_IMAGES 等)</strong> — 日記に使う写真は Android の標準の選択画面を通すため、フォルダ全体を読む権限は不要です。利用者が選んだ写真だけが渡されます。</li>
+  <li><strong>SCHEDULE_EXACT_ALARM(ぴったりの時刻に鳴らす)</strong> — お知らせが数分ずれても差し支えないため、明示的に削除しています。</li>
+</ul>
+<p>また本アプリは、カメラのない端末にも配信できるよう、カメラを「必須ではない」(<code>required="false"</code>)として宣言しています。</p>
+</div>
+
+<h3>本アプリ自身が使用するその他の権限</h3>
+<ul>
+  <li><code>INTERNET</code> — AI・翻訳・為替レート・広告の通信に使用します。</li>
+  <li><code>ACCESS_NETWORK_STATE</code> — 通信できる状態かどうかを判定するために使用します。通信の内容を読み取るものではありません。</li>
+  <li><code>RECEIVE_BOOT_COMPLETED</code> — 端末を再起動したあとも、予約済みのお知らせが消えないようにするために使用します。</li>
+</ul>
+
+<h3>組み込んだ部品が自動的に追加する権限</h3>
+<p>広告とお知らせの部品が、以下の権限を自動的に追加します。当方が個別に指定したものではありません。いずれも利用者に許可を求める画面が出ない種類の権限で、当方はこれらを通じて情報を取得していません。</p>
+<ul>
+  <li><code>com.google.android.gms.permission.AD_ID</code> — 広告 ID を利用するための権限。</li>
+  <li><code>ACCESS_ADSERVICES_AD_ID</code> / <code>ACCESS_ADSERVICES_ATTRIBUTION</code> / <code>ACCESS_ADSERVICES_TOPICS</code> — Android の広告向けの仕組み(プライバシーサンドボックス)を利用するための権限。</li>
+  <li><code>WAKE_LOCK</code> — 広告の読み込み中やお知らせの処理中に、端末がすぐ休止状態にならないようにするための権限。</li>
+  <li><code>FOREGROUND_SERVICE</code> — 広告関連の処理を行うための権限。</li>
+</ul>
+
+<h3>ネットワーク通信の一覧</h3>
+<table>
+<tr><th class="wrap">通信先</th><th class="wrap">目的</th><th class="wrap">送信する情報</th></tr>
+<tr>
+  <td class="wrap">当方の中継サーバー<br><code>tripkit-worker.primarydice.workers.dev</code></td>
+  <td class="wrap">AI と翻訳の呼び出し、残り回数の確認、機種変更の引き継ぎ</td>
+  <td class="wrap">「3. AI と翻訳について」に記載の情報</td>
+</tr>
+<tr>
+  <td class="wrap">ExchangeRate-API<br><code>open.er-api.com</code></td>
+  <td class="wrap">為替レートの取得</td>
+  <td class="wrap">なし。レートの一覧を受け取るだけで、こちらから情報を送りません</td>
+</tr>
+<tr>
+  <td class="wrap">Google の広告配信サーバー(Google AdMob)</td>
+  <td class="wrap">画面に表示する広告を受け取るため</td>
+  <td class="wrap">広告 ID、IP アドレス、端末の種類・OS・言語・画面サイズなどの一般的な端末情報、広告の表示・クリックの記録。旅の記録や写真は送信されません</td>
+</tr>
+</table>
+
+<p>本アプリが行う通信は、上記の3つだけです。したくリスト、到着ガイド、両替の計算(取得済みのレートを使う場合)、使ったお金の記録、翻訳した文の読み返しは、通信のない場所(圏外・機内モード)でもお使いいただけます。</p>
+
+<p>なお、インターネット通信という仕組み上、接続元の IP アドレスなど一般的な通信記録が、通信先である外部サービス側に残る場合があります。これは当方が取得・保存するものではありません。</p>
+
+<h2>6. 広告の表示と、第三者への情報の提供</h2>
+
+<div class="box">
+<h3>本アプリは広告を表示します</h3>
+<p>本アプリは、Google が提供する広告配信サービス「Google AdMob」を利用して広告を表示します。本アプリを無料で提供し続けるためのものです。広告を表示・配信するにあたり、Google は本アプリを通じて以下の情報を取得します。これらは Google が取得するものであり、<strong>当方(提供者)が受け取ったり、保存したり、閲覧したりすることはありません。</strong></p>
+</div>
+
+<h3>広告のために取得される情報</h3>
+<ul>
+  <li><strong>広告 ID(Advertising ID)</strong> — 端末ごとに割り当てられる、広告のための識別番号です。氏名・電話番号・メールアドレスとは結び付いておらず、利用者ご自身の操作でいつでもリセット・無効化できます(下記参照)。</li>
+  <li>IP アドレス、およびそこから推定されるおおよその地域(市区町村より広い範囲)</li>
+  <li>端末の種類、OS のバージョン、言語設定、画面の大きさなどの一般的な端末情報</li>
+  <li>広告が表示された回数、押された回数などの記録</li>
+</ul>
+<p>取得される情報の詳細および最新の内容は、<a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">Google のポリシーと規約(Google のサービスを使用するパートナーのサイトやアプリで収集される情報)</a>をご参照ください。</p>
+
+<p><strong>旅の記録、行き先、写真、日記、相談の内容、使ったお金の記録が、広告配信に使われることはありません。</strong>これらはそもそも当方の手元にも Google の手元にもありません。</p>
+
+<h3>広告 ID をリセット・無効にする方法</h3>
+<p>Android の端末設定から、いつでも次の操作を行えます(項目名は端末によって異なります)。</p>
+<ul>
+  <li>「設定」→「セキュリティとプライバシー」→「その他のプライバシー設定」→「広告」と進み、「広告 ID を削除」または「広告 ID をリセット」を選びます。</li>
+  <li>広告 ID を削除すると、興味・関心に基づく広告(パーソナライズ広告)は表示されなくなります。広告そのものは引き続き表示されますが、利用者に合わせて選ばれることはなくなります。</li>
+</ul>
+
+<h3>配信地域と、旅先で開いたときの扱い</h3>
+<p>本アプリは<strong>日本国内でのみ配信</strong>しています。ただし本アプリは海外旅行のためのアプリであり、旅先で開かれることが前提です。そこで、EU・英国・スイスなど、広告の表示前に利用者の同意を得ることが法令で義務づけられている地域で開かれた場合に備え、Google の同意管理の仕組み(UMP)を組み込んでいます。</p>
+<p>これらの地域で開かれ、同意を確認できなかった場合、<strong>本アプリは広告を表示しません。</strong>広告が出なくても、本アプリの機能はすべてこれまでどおりお使いいただけます。</p>
+<p>同意にお答えいただいたあとで設定を変えたい場合は、本アプリの「困った」画面から「広告のプライバシー設定」を開いてください(この項目は、同意が必要な地域でのみ表示されます)。</p>
+
+<h3>当方が行わないこと</h3>
+<p>当方は、本アプリで取り扱う情報を、法令に基づく場合を除き、第三者に提供・開示・販売・貸与することはありません。上記の広告配信および「3. AI と翻訳について」に記載した処理を除き、本アプリは以下を行いません。</p>
+<ul>
+  <li>アクセス解析ツール(Google アナリティクス等)の組み込み</li>
+  <li>クラッシュレポートの外部送信</li>
+  <li>当方による、利用者の行動を横断的に追跡するトラッキング</li>
+</ul>
+
+<h2>7. 旅パス(アプリ内購入)について</h2>
+
+<p>本アプリの AI 機能(行程表・相談・日記)には、無料でお使いいただける回数の上限があります。続けてお使いになる場合は、アプリ内購入「旅パス」をご購入いただけます。購入は任意です。<strong>旅パスをご購入いただかなくても、したくリスト、到着ガイド、両替の計算、翻訳、使ったお金の記録、旅の記録は、すべてこれまでどおりお使いいただけます。</strong></p>
+
+<ul>
+  <li><strong>お支払いは Google Play が行います。</strong>クレジットカード番号・銀行口座・氏名・住所などのお支払いに関する情報は、Google が取り扱います。<strong>当方がこれらを受け取ることも、閲覧することもありません。</strong></li>
+  <li>当方の中継サーバーに記録されるのは、前記の「端末の印」に対して<strong>「あと何回つかえるか」と「有効期限」の数だけ</strong>です。だれが購入したかを示す情報は保存しません。</li>
+  <li><strong>機種変更のとき</strong>は、本アプリの「旅パス」画面で発行できる「引き継ぎコード」で、残り回数を新しい端末へ移せます。このとき中継サーバーに一時的に保存されるのは、コードと「端末の印」の対応だけです(500日で自動的に消えます)。</li>
+  <li>購入に関するお問い合わせ、返金の手続きは、Google Play のヘルプまたは末尾の連絡先へご連絡ください。</li>
+</ul>
+
+<h2>8. 本アプリが利用している第三者サービス</h2>
+
+<table>
+<tr><th class="wrap">サービス・技術</th><th class="wrap">用途</th><th class="wrap">データの送信</th></tr>
+<tr>
+  <td class="wrap">Capacitor(<code>@capacitor/core</code>、<code>@capacitor/android</code> ほか)</td>
+  <td class="wrap">画面表示用のファイルを Android アプリとして動かすための土台</td>
+  <td class="wrap">データの送信はありません。端末内で動作する仕組みです</td>
+</tr>
+<tr>
+  <td class="wrap">Google ML Kit 文字認識(<code>com.google.mlkit:text-recognition</code>)</td>
+  <td class="wrap">カメラで撮った画像から文字を読み取る</td>
+  <td class="wrap"><strong>データの送信はありません。</strong>認識用のモデルをアプリに同梱しており、端末内だけで処理します</td>
+</tr>
+<tr>
+  <td class="wrap">Cloudflare Workers</td>
+  <td class="wrap">当方の中継サーバーを動かす基盤</td>
+  <td class="wrap">本アプリからの通信がここを通過します。保存されるのは「端末の印」と残り回数だけです。海外のサーバーで処理されます</td>
+</tr>
+<tr>
+  <td class="wrap">Anthropic (Claude API)</td>
+  <td class="wrap">行程表・相談・日記の下書きの生成</td>
+  <td class="wrap">「3. AI と翻訳について」に記載の情報が送信されます。海外(米国等)のサーバーで処理されます。取り扱いは<a href="https://www.anthropic.com/legal/privacy" target="_blank" rel="noopener">同社のプライバシーポリシー</a>によります</td>
+</tr>
+<tr>
+  <td class="wrap">Microsoft Azure Translator</td>
+  <td class="wrap">翻訳</td>
+  <td class="wrap">訳したい文が送信されます。海外のサーバーで処理されます。取り扱いは<a href="https://privacy.microsoft.com/privacystatement" target="_blank" rel="noopener">同社のプライバシーステートメント</a>によります</td>
+</tr>
+<tr>
+  <td class="wrap">ExchangeRate-API</td>
+  <td class="wrap">為替レートの取得</td>
+  <td class="wrap">こちらから情報を送りません。レートの一覧を受け取るだけです</td>
+</tr>
+<tr>
+  <td class="wrap">Google AdMob(Google Mobile Ads SDK)</td>
+  <td class="wrap">広告の表示</td>
+  <td class="wrap">広告 ID・IP アドレス・端末情報などが Google へ送信されます。取り扱いについては<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google プライバシーポリシー</a>および<a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">AdMob のデータ利用に関する説明</a>をご参照ください。海外(米国など)のサーバーと通信します</td>
+</tr>
+<tr>
+  <td class="wrap">Google Play 課金(アプリ内購入)</td>
+  <td class="wrap">旅パスのお支払い</td>
+  <td class="wrap">お支払いに関する情報は Google が取り扱います。当方は受け取りません</td>
+</tr>
+</table>
+
+<p>上記以外に、アクセス解析・クラッシュレポート・行動追跡を行う SDK やライブラリは組み込んでいません。</p>
+
+<h2>9. データの保持期間と削除方法</h2>
+
+<h3>端末内のデータ</h3>
+<ul>
+  <li>旅の記録は最大30件まで保存され、これを超えると古いものから自動的に消えます。</li>
+  <li>「この旅を消す」で、記録を1件ずつ削除できます(確認画面が出ます)。</li>
+  <li>「記録を全部消す」で、使ったお金の記録をまとめて削除できます。</li>
+  <li>端末の「設定」→「アプリ」→「トリップキット」→「ストレージ」→「データを消去」で、端末内のすべてのデータを削除できます。</li>
+  <li><strong>アンインストールすると、端末内に保存されたデータはすべて削除されます。</strong></li>
+</ul>
+<div class="box note">
+<p>端末内のデータを消去またはアンインストールすると、<strong>旅パスの残り回数も端末からは消えます。</strong>消す前に、本アプリの「旅パス」画面で<strong>引き継ぎコード</strong>を発行し、控えておいてください。</p>
+</div>
+
+<h3>中継サーバーのデータ</h3>
+<ul>
+  <li>「回数のさいふ」と「引き継ぎコード」は、最後の更新から<strong>500日で自動的に消えます。</strong></li>
+  <li>それ以外の情報(行き先・相談の文・翻訳した文・写真の情報・日記)は、そもそも保存していないため、消す対象がありません。</li>
+  <li>「回数のさいふ」の削除をご希望の場合は、末尾の連絡先へ「端末の印」を添えてご連絡ください。ただし、削除すると<strong>購入済みの旅パスの残り回数も失われ、復元できません。</strong>「端末の印」は当方から利用者を特定する手段ではないため、ご本人以外からのご依頼にはお応えできません。</li>
+</ul>
+
+<h2>10. 端末のバックアップについて</h2>
+<p>Android には、アプリのデータを自動的に Google ドライブへ控えておく「自動バックアップ」の仕組みと、機種変更のときにデータを新しい端末へ引き継ぐ仕組みがあります。</p>
+<p><strong>本アプリは、この両方を無効に設定しています。</strong>そのため、旅の記録・使ったお金・行程表・日記・AI とのやりとりが、利用者の知らないうちに Google ドライブへ送られたり、他の端末へコピーされたりすることはありません。本アプリが「旅の記録はこの端末の中だけに残ります」とご案内しているとおりの状態を保つためです。</p>
+<p>機種変更のときは、次の2つを利用者ご自身の操作で行っていただきます。</p>
+<ul>
+  <li><strong>旅の記録など</strong> — 「記録」画面の「控えを書き出す」でファイルを書き出し、Google ドライブ・LINE・メールなど、ご自身が選んだ送り先へ保存します。新しい端末では「控えを読み込む」で戻します。どこへ保存するかは利用者が選びます。当方はこのファイルを受け取りません。</li>
+  <li><strong>旅パスの残り回数</strong> — 「旅パス」画面の「引き継ぎコード」で移します。<strong>控えのファイルには、旅パスの残り回数は含まれません。</strong>ファイルを配るだけで有料の回数が何台でも使えてしまうことを防ぐためです。</li>
+</ul>
+
+<h2>11. 安全管理措置</h2>
+<ul>
+  <li>外部サービスとの通信は、すべて暗号化された HTTPS 接続で行っています。</li>
+  <li>AI・翻訳サービスの利用に必要な鍵は、アプリの中に入れず、当方の中継サーバー側でのみ保持しています。アプリを解析されても鍵は取り出せません。</li>
+  <li>本アプリのデータは、Android のアプリサンドボックス(アプリごとにデータ領域を分離する仕組み)によって保護され、他のアプリから直接アクセスできません。</li>
+  <li>「控えを読み込む」で読み込むファイルからは、本アプリが定めた項目だけを取り込みます。ファイルを書きかえて別の値を仕込むことはできません。</li>
+  <li>中継サーバーに保存する情報を、「端末の印」と回数だけに限っています。保存していない情報は、漏えいしようがありません。</li>
+</ul>
+
+<h2>12. 子どもの利用について</h2>
+<p>本アプリは、13歳未満の子どもを対象としたものではなく、Google Play においても対象年齢を13歳以上として登録しています。当方は、いずれの利用者からも個人を識別できる情報を取得しません。</p>
+
+<h2>13. 国外への移転について</h2>
+<p>「3. AI と翻訳について」および「8. 本アプリが利用している第三者サービス」に記載のとおり、AI・翻訳・広告・中継サーバーの処理は、日本国外(米国等)のサーバーで行われる場合があります。本アプリをご利用いただくことで、これに同意いただいたものとみなします。</p>
+
+<h2>14. 本ポリシーの変更</h2>
+<p>法令の変更、機能の追加、利用する外部サービスの変更などに応じて、本ポリシーを変更することがあります。変更した場合は、本ページの「最終更新日」を更新し、本ページ上で公表します。重要な変更を行う場合は、アプリ内でもお知らせします。</p>
+
+<h2>15. お問い合わせ</h2>
+<div class="contact">
+<p>本ポリシーおよび本アプリにおける情報の取り扱いに関するお問い合わせは、下記までご連絡ください。</p>
+<p>提供者: Primary Dice<br>
+連絡先: <a href="mailto:primarydice-develop@yahoo.co.jp">primarydice-develop@yahoo.co.jp</a></p>
+</div>
+
+<hr>
+
+<div class="en">
+<h2>Privacy Policy (English Summary)</h2>
+<p>This is an English summary of the privacy policy for <strong>TripKit</strong> (package <code>app.primarydice.tripkit</code>), an Android app for overseas travel provided by <strong>Primary Dice</strong> ("the developer"). The app offers a packing checklist, arrival guides, currency conversion, translation, expense tracking, AI-generated itineraries and advice, trip records, and AI-drafted travel diaries. The Japanese text above is the authoritative version.</p>
+<ul>
+  <li><strong>Your trip records stay on your device.</strong> Destinations, dates, expenses, checklists, itineraries and diaries are stored only in the app's local storage. They are never sent to the developer's server. The developer has no way to know where you travelled.</li>
+  <li><strong>Photos never leave your device.</strong> When drafting a diary, the app reads only the first ~64 KB of each selected photo, on-device, to extract the <em>capture time</em>. Only counts such as "3 photos around 8am on day 2" are sent onward. <strong>The image data itself is never transmitted, and GPS coordinates embedded in photos are neither read nor sent.</strong></li>
+  <li><strong>No location permission.</strong> The app never requests location access. It also requests no camera permission (it invokes the device's own camera app) and no photo-library permission (photos are chosen through Android's standard picker).</li>
+  <li><strong>No account, no personal identifiers.</strong> There is no sign-up or login. The developer collects no names, email addresses, phone numbers, contacts, microphone audio, or device identifiers.</li>
+  <li><strong>What is sent when you use AI or translation.</strong> These features route through a relay server operated by the developer (<code>tripkit-worker.primarydice.workers.dev</code>, on Cloudflare Workers) and then to <strong>Anthropic (Claude API)</strong> or <strong>Microsoft Azure Translator</strong>. Sent content includes your destination country, trip length, your typed question, that day's itinerary and expense summary, and photo-count data. <strong>The relay server does not store any of this</strong> — it only logs aggregate character counts, with no content.</li>
+  <li><strong>Camera translation runs on-device.</strong> Text recognition uses Google ML Kit's bundled on-device model; the captured image is never uploaded and the temporary file is deleted immediately after recognition. Only the recognised text is sent for translation.</li>
+  <li><strong>Please do not type personal data</strong> such as names, addresses, card numbers or passport numbers into the AI or translation fields, as that text is passed to the external services.</li>
+  <li><strong>What the developer's server does store.</strong> Only two things: a wallet record keyed by a <strong>random 24-character device string</strong> holding how many AI uses remain and the pass expiry date, and a transfer code used for changing phones. Both expire automatically after 500 days. The random string is generated locally, is unrelated to any device or advertising identifier, and changes if you reinstall the app.</li>
+  <li><strong>In-app purchase.</strong> An optional "Trip Pass" adds AI usage. <strong>Payment is handled entirely by Google Play</strong>; the developer never receives or sees card numbers, bank details, names or addresses. All non-AI features remain fully available without purchasing.</li>
+  <li><strong>Notifications.</strong> The app asks for <code>POST_NOTIFICATIONS</code> only when you first switch reminders on, to remind you about your packing checklist before departure. Notification content is composed on-device and never transmitted.</li>
+  <li><strong>The app shows ads</strong> via <strong>Google AdMob</strong>. Google receives your advertising ID, IP address (and approximate region), general device information, and impression/click records. <strong>The developer never receives, stores or views this. Trip records, photos and diaries are never used for advertising.</strong> You can reset or delete your advertising ID under Settings → Security &amp; privacy → More privacy settings → Ads.</li>
+  <li><strong>Distribution and consent.</strong> The app is distributed in Japan only, but because it is a travel app it is expected to be opened abroad. Google's User Messaging Platform is therefore integrated; if the app is opened in the EU, UK or Switzerland and consent cannot be confirmed, <strong>no ads are shown at all</strong>. All app features continue to work.</li>
+  <li><strong>Backups are disabled.</strong> The app explicitly opts out of Android Auto Backup and device-to-device transfer, so trip records are never copied to Google Drive or another phone without your action. To move to a new phone, export a backup file yourself from the Records screen (you choose where it goes), and move remaining AI uses with the transfer code. <strong>The backup file deliberately excludes the Trip Pass balance</strong>, so sharing the file cannot duplicate a paid pass.</li>
+  <li><strong>Deletion.</strong> Delete individual trips or all expense records in-app, or use Settings → Apps → TripKit → Storage → Clear data, or uninstall. Server-side wallet data expires after 500 days; to request earlier deletion, contact the developer with your device string — note that this also permanently forfeits any purchased balance.</li>
+  <li><strong>Other components:</strong> Capacitor, Google ML Kit text recognition (on-device), Cloudflare Workers, Anthropic Claude API, Microsoft Azure Translator, ExchangeRate-API, Google AdMob, Google Play Billing. No analytics, crash-reporting, or tracking SDKs are bundled.</li>
+  <li><strong>International transfers.</strong> AI, translation, advertising and relay processing may take place on servers outside Japan, including the United States.</li>
+  <li><strong>Children.</strong> The app is not directed to children under 13 and is listed on Google Play with a 13+ target audience.</li>
+  <li><strong>Contact:</strong> <a href="mailto:primarydice-develop@yahoo.co.jp">primarydice-develop@yahoo.co.jp</a></li>
+</ul>
+<p>Effective date: September 8, 2026. Last updated: September 8, 2026.</p>
+</div>
+
+</body>
+</html>
