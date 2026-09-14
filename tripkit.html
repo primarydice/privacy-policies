@@ -65,6 +65,7 @@
   <li><strong>位置情報の権限を一切要求しません。</strong>カメラの権限も、写真フォルダを読む権限も要求しません。</li>
   <li><strong>アカウント登録は不要です。</strong>氏名・メールアドレス・電話番号など、個人を識別する情報は取得しません。</li>
   <li><strong>AI と翻訳を使うときだけ、必要な文が外部へ送られます。</strong>当方が運用する中継サーバーを通り、AI(Anthropic 社)または翻訳サービス(Microsoft 社)へ渡ります。<strong>中継サーバーは、その中身を保存しません。</strong>詳しくは「3. AI と翻訳について」をご覧ください。</li>
+  <li><strong>行程表を作っているあいだ、行き先の国の観光地の写真を表示します。</strong>写真は当方の中継サーバーから受け取ります。このとき伝わるのは「どの国の写真か」(写真のファイル名)だけです。写真は Wikimedia Commons で公開されている、撮影者の名前を示せば利用できるもので、写真ごとに撮影者とライセンスを表示しています。</li>
   <li><strong>当方のサーバーに残るのは、「あと何回つかえるか」の数だけです。</strong>端末ごとに割り当てた無作為な文字列と、残り回数だけを保存します。個人とは結び付きません。</li>
   <li><strong>Android の自動バックアップを無効にしています。</strong>旅の記録が Google ドライブへ控えられたり、機種変更で別の端末へ自動的にコピーされたりすることはありません。</li>
   <li><strong>本アプリは広告を表示します。</strong>Google AdMob によるもので、広告を出すために Google が広告 ID などを取得します。旅の記録や写真が広告に使われることはありません。</li>
@@ -304,7 +305,7 @@
 
 <h3>本アプリ自身が使用するその他の権限</h3>
 <ul>
-  <li><code>INTERNET</code> — AI・翻訳・為替レート・広告の通信に使用します。</li>
+  <li><code>INTERNET</code> — AI・翻訳・為替レート・広告の通信と、行程表を作っているあいだに表示する観光地の写真の受け取りに使用します。</li>
   <li><code>ACCESS_NETWORK_STATE</code> — 通信できる状態かどうかを判定するために使用します。通信の内容を読み取るものではありません。</li>
   <li><code>RECEIVE_BOOT_COMPLETED</code> — 端末を再起動したあとも、予約済みのお知らせが消えないようにするために使用します。</li>
 </ul>
@@ -323,8 +324,8 @@
 <tr><th class="wrap">通信先</th><th class="wrap">目的</th><th class="wrap">送信する情報</th></tr>
 <tr>
   <td class="wrap">当方の中継サーバー<br><code>tripkit-worker.primarydice.workers.dev</code></td>
-  <td class="wrap">AI と翻訳の呼び出し、残り回数の確認、機種変更の引き継ぎ</td>
-  <td class="wrap">「3. AI と翻訳について」に記載の情報</td>
+  <td class="wrap">AI と翻訳の呼び出し、残り回数の確認、機種変更の引き継ぎ、行程表を作っているあいだに表示する観光地の写真の受け取り</td>
+  <td class="wrap">「3. AI と翻訳について」に記載の情報。写真の受け取りでは、どの国の写真かを示すファイル名だけで、旅の内容や端末の印は送りません</td>
 </tr>
 <tr>
   <td class="wrap">ExchangeRate-API<br><code>open.er-api.com</code></td>
@@ -408,7 +409,7 @@
 <tr>
   <td class="wrap">Cloudflare Workers</td>
   <td class="wrap">当方の中継サーバーを動かす基盤</td>
-  <td class="wrap">本アプリからの通信がここを通過します。保存されるのは「端末の印」と残り回数だけです。海外のサーバーで処理されます</td>
+  <td class="wrap">本アプリからの通信がここを通過します。保存されるのは「端末の印」と残り回数だけです。行程表を作っているあいだに表示する観光地の写真も、ここから配信します。海外のサーバーで処理されます</td>
 </tr>
 <tr>
   <td class="wrap">Anthropic (Claude API)</td>
@@ -419,6 +420,11 @@
   <td class="wrap">Microsoft Azure Translator</td>
   <td class="wrap">翻訳</td>
   <td class="wrap">訳したい文が送信されます。海外のサーバーで処理されます。取り扱いは<a href="https://privacy.microsoft.com/privacystatement" target="_blank" rel="noopener">同社のプライバシーステートメント</a>によります</td>
+</tr>
+<tr>
+  <td class="wrap">Wikimedia Commons</td>
+  <td class="wrap">行程表を作っているあいだに表示する観光地の写真の出どころ</td>
+  <td class="wrap"><strong>データの送信はありません。</strong>写真は、Wikimedia Commons で自由な利用が許されているもの(CC BY / CC BY-SA / CC0 など)を縮小して当方の中継サーバーに置いたもので、本アプリが Wikimedia へ通信することはありません。写真ごとに撮影者とライセンスを表示しています</td>
 </tr>
 <tr>
   <td class="wrap">ExchangeRate-API</td>
@@ -506,6 +512,7 @@
   <li><strong>No location permission.</strong> The app never requests location access. It also requests no camera permission (it invokes the device's own camera app) and no photo-library permission (photos are chosen through Android's standard picker).</li>
   <li><strong>No account, no personal identifiers.</strong> There is no sign-up or login. The developer collects no names, email addresses, phone numbers, contacts, microphone audio, or device identifiers.</li>
   <li><strong>What is sent when you use AI or translation.</strong> These features route through a relay server operated by the developer (<code>tripkit-worker.primarydice.workers.dev</code>, on Cloudflare Workers) and then to <strong>Anthropic (Claude API)</strong> or <strong>Microsoft Azure Translator</strong>. Sent content includes your destination country, trip length, your typed question, that day's itinerary and expense summary, and photo-count data. <strong>The relay server does not store any of this</strong> — it only logs aggregate character counts, with no content.</li>
+  <li><strong>Destination photos.</strong> While an itinerary is being generated, the app shows photos of famous sights in your destination country, downloaded from the same relay server. The request reveals only which country's photos are fetched (via the file name); no trip details or device string are sent. The photos are resized copies of freely licensed images from Wikimedia Commons (CC BY / CC BY-SA / CC0 etc.), each shown with its photographer and license. The app never connects to Wikimedia.</li>
   <li><strong>Camera translation runs on-device.</strong> Text recognition uses Google ML Kit's bundled on-device model; the captured image is never uploaded and the temporary file is deleted immediately after recognition. Only the recognised text is sent for translation.</li>
   <li><strong>Please do not type personal data</strong> such as names, addresses, card numbers or passport numbers into the AI or translation fields, as that text is passed to the external services.</li>
   <li><strong>What the developer's server does store.</strong> Only two things: a wallet record keyed by a <strong>random 24-character device string</strong> holding how many AI uses remain and the pass expiry date, and a transfer code used for changing phones. Both expire automatically after 500 days. The random string is generated locally, is unrelated to any device or advertising identifier, and changes if you reinstall the app.</li>
@@ -515,7 +522,7 @@
   <li><strong>Distribution and consent.</strong> The app is distributed in Japan only, but because it is a travel app it is expected to be opened abroad. Google's User Messaging Platform is therefore integrated; if the app is opened in the EU, UK or Switzerland and consent cannot be confirmed, <strong>no ads are shown at all</strong>. All app features continue to work.</li>
   <li><strong>Backups are disabled.</strong> The app explicitly opts out of Android Auto Backup and device-to-device transfer, so trip records are never copied to Google Drive or another phone without your action. To move to a new phone, export a backup file yourself from the Records screen (you choose where it goes), and move remaining AI uses with the transfer code. <strong>The backup file deliberately excludes the Trip Pass balance</strong>, so sharing the file cannot duplicate a paid pass.</li>
   <li><strong>Deletion.</strong> Delete individual trips or all expense records in-app, or use Settings → Apps → TripKit → Storage → Clear data, or uninstall. Server-side wallet data expires after 500 days; to request earlier deletion, contact the developer with your device string — note that this also permanently forfeits any purchased balance.</li>
-  <li><strong>Other components:</strong> Capacitor, Google ML Kit text recognition (on-device), Cloudflare Workers, Anthropic Claude API, Microsoft Azure Translator, ExchangeRate-API, Google AdMob, Google Play Billing. No analytics, crash-reporting, or tracking SDKs are bundled.</li>
+  <li><strong>Other components:</strong> Capacitor, Google ML Kit text recognition (on-device), Cloudflare Workers (also hosts the destination photos), Wikimedia Commons (photo source only; the app does not connect to it), Anthropic Claude API, Microsoft Azure Translator, ExchangeRate-API, Google AdMob, Google Play Billing. No analytics, crash-reporting, or tracking SDKs are bundled.</li>
   <li><strong>International transfers.</strong> AI, translation, advertising and relay processing may take place on servers outside Japan, including the United States.</li>
   <li><strong>Children.</strong> The app is not directed to children under 13 and is listed on Google Play with a 13+ target audience.</li>
   <li><strong>Contact:</strong> <a href="mailto:primarydice-develop@yahoo.co.jp">primarydice-develop@yahoo.co.jp</a></li>
