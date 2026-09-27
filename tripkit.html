@@ -53,7 +53,7 @@
 <h1>トリップキット プライバシーポリシー</h1>
 <p class="meta">対象アプリ: トリップキット(Android アプリ / パッケージ名 <code>app.primarydice.tripkit</code>)</p>
 <p class="meta">提供者(デベロッパー): Primary Dice</p>
-<p class="meta">制定日: 2026年9月8日 / 最終更新日: 2026年9月26日</p>
+<p class="meta">制定日: 2026年9月8日 / 最終更新日: 2026年9月27日</p>
 
 <p>本プライバシーポリシー(以下「本ポリシー」)は、上記提供者(以下「当方」)が提供する Android アプリケーション「トリップキット」(以下「本アプリ」)における、利用者の情報の取り扱いについて定めるものです。本アプリは、海外旅行の準備と旅先での困りごとを助けるアプリで、したくリスト、到着ガイド、両替の計算、翻訳、使ったお金の記録、AI による行程表づくりと相談、AI によるスポット・グルメさがし、AI による乗り物ガイド、旅の記録と日記の下書きの機能があります。本アプリをご利用いただく前に、本ポリシーをお読みください。本アプリをインストールしてご利用になった場合、本ポリシーの内容に同意いただいたものとみなします。</p>
 
@@ -83,12 +83,12 @@
 <tr><th class="wrap">情報の種類</th><th class="wrap">具体的な内容</th><th class="wrap">取得のタイミング</th></tr>
 <tr>
   <td class="wrap">いまの旅</td>
-  <td class="wrap">行き先として選んだ国と、出発日・帰国日</td>
+  <td class="wrap">行き先として選んだ国と、出発日・帰国日。入力した場合は、回りたい都市・飛行機の空港と日時・泊まるホテルの名前・旅のこのみ(ツアーを使うかどうかを含む)</td>
   <td class="wrap">利用者が「旅を作る」で入力したとき</td>
 </tr>
 <tr>
   <td class="wrap">旅の記録</td>
-  <td class="wrap">終わった旅の一覧(行き先・日程・使ったお金・行程表・したくリストの済み具合・AI とのやりとり・日記)。最大30件</td>
+  <td class="wrap">終わった旅の一覧(行き先・回った都市・着いた空港と発った空港・日程・使ったお金・行程表・したくリストの済み具合・AI とのやりとり・日記)。最大30件。都市と空港は、旅の履歴の地図でどこを塗るか(例: アメリカ本土かハワイか)を決めるのにも使います</td>
   <td class="wrap">旅が終わったとき、および次の旅を作ったとき</td>
 </tr>
 <tr>
@@ -263,7 +263,7 @@
 <tr><th class="wrap">機能</th><th class="wrap">外部へ送られる情報</th><th class="wrap">渡す先</th></tr>
 <tr>
   <td class="wrap">行程表を作る</td>
-  <td class="wrap">行き先の国、日程の日数、選んだ旅のこのみ(食べ歩き中心など・回り方・移動のしかた)、使えるお金のめやす、入力した場合は飛行機の空港と日時・泊まるホテルの名前、端末の印。AI は名所の入場料をたしかめるため、<strong>名所の名前でインターネットを検索</strong>することがあります(検索は Anthropic 社の仕組みの中で行われ、利用者の端末から検索サイトへ直接つながることはありません)。運賃のめやすには、中継サーバーに残っている乗り物ガイドの控え(国の交通の案内だけ)を使います</td>
+  <td class="wrap">行き先の国、日程の日数、選んだ旅のこのみ(食べ歩き中心など・回り方・移動のしかた・ツアーを使うかどうか)、使えるお金のめやす、入力した場合は回りたい都市の名前(候補から選んだものと、利用者が自分で入力したもの)・飛行機の空港と日時・泊まるホテルの名前、端末の印。AI は名所の入場料をたしかめるため、<strong>名所の名前でインターネットを検索</strong>することがあります(検索は Anthropic 社の仕組みの中で行われ、利用者の端末から検索サイトへ直接つながることはありません)。運賃のめやすには、中継サーバーに残っている乗り物ガイドの控え(国の交通の案内だけ)を使います</td>
   <td class="wrap">Anthropic (Claude API)</td>
 </tr>
 <tr>
@@ -554,7 +554,7 @@
   <li><strong>Photos never leave your device.</strong> When drafting a diary, the app reads only the first ~64 KB of each selected photo, on-device, to extract the <em>capture time</em>. Only counts such as "3 photos around 8am on day 2" are sent to the relay server, which passes just the time of day (morning, afternoon or evening) to the AI — not the counts. <strong>The image data itself is never transmitted, and GPS coordinates embedded in photos are neither read nor sent.</strong> The selected photos are also saved on your device only (resized, with all Exif/GPS data removed) and placed between the diary's paragraphs.</li>
   <li><strong>No location permission.</strong> The app never requests location access. It also requests no camera permission (it invokes the device's own camera app) and no photo-library permission (photos are chosen through Android's standard picker).</li>
   <li><strong>No account, no personal identifiers.</strong> There is no sign-up or login. The developer collects no names, email addresses, phone numbers, contacts, microphone audio, or device identifiers.</li>
-  <li><strong>What is sent when you use AI or translation.</strong> These features route through a relay server operated by the developer (<code>tripkit-worker.primarydice.workers.dev</code>, on Cloudflare Workers) and then to <strong>Anthropic (Claude API)</strong> or <strong>Microsoft Azure Translator</strong>. Sent content includes your destination country, trip length, your typed question, that day's itinerary and expense summary, and photo time-of-day data. The spot &amp; food search sends only the chosen country, an optional town name you type, and the category (sights, local dishes, street food, souvenirs or activities). Itinerary generation also sends your chosen travel style (pace and transport preference) and, if entered, flight airports/times and hotel names. The transport guide sends only the chosen country (plus the device string, for ticket counting) — no dates, itinerary, town names or preferences; the AI then searches the web for current fares <strong>within Anthropic's service</strong>, and your device never connects to a search engine for this. Itinerary generation may also search the web for current admission fees of the sights (by sight name), and the AI advice feature searches the web once, based on your question, only when you ask about prices or opening hours; the spot &amp; food search also searches the web once (country, optional town name and category) and names shops or tour operators only if confirmed by that search — all within Anthropic's service. <strong>Apart from the transport guides described below, the relay server does not store any of this</strong> — it only logs aggregate character counts, with no content.</li>
+  <li><strong>What is sent when you use AI or translation.</strong> These features route through a relay server operated by the developer (<code>tripkit-worker.primarydice.workers.dev</code>, on Cloudflare Workers) and then to <strong>Anthropic (Claude API)</strong> or <strong>Microsoft Azure Translator</strong>. Sent content includes your destination country, trip length, your typed question, that day's itinerary and expense summary, and photo time-of-day data. The spot &amp; food search sends only the chosen country, an optional town name you type, and the category (sights, local dishes, street food, souvenirs or activities). Itinerary generation also sends your chosen travel style (pace, transport preference and whether to use guided tours) and, if entered, the cities you want to visit (picked from a list or typed by you), flight airports/times and hotel names. The transport guide sends only the chosen country (plus the device string, for ticket counting) — no dates, itinerary, town names or preferences; the AI then searches the web for current fares <strong>within Anthropic's service</strong>, and your device never connects to a search engine for this. Itinerary generation may also search the web for current admission fees of the sights (by sight name), and the AI advice feature searches the web once, based on your question, only when you ask about prices or opening hours; the spot &amp; food search also searches the web once (country, optional town name and category) and names shops or tour operators only if confirmed by that search — all within Anthropic's service. <strong>Apart from the transport guides described below, the relay server does not store any of this</strong> — it only logs aggregate character counts, with no content.</li>
   <li><strong>"View in Google Maps".</strong> Spot &amp; food search results have a button that opens Google Maps (the app, or a browser) with a search phrase such as "Shilin Night Market". <strong>That phrase is passed to Google only when you tap the button</strong>, and is then handled under <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>. The app does not access your location for this. Search results are stored only on your device (up to 20 searches) and are deleted together with the trip.</li>
   <li><strong>Destination photos.</strong> On the home screen and while an itinerary is being generated, the app shows photos of famous sights in your destination country, downloaded from the same relay server. The request reveals only which country's photos are fetched (via the file name); no trip details or device string are sent. The photos are resized copies of public-domain images from Wikimedia Commons (CC0 / public domain) and Unsplash (Unsplash License), which need no attribution. The app never connects to Unsplash either. The app never connects to Wikimedia.</li>
   <li><strong>Camera translation runs on-device.</strong> Text recognition uses Google ML Kit's bundled on-device model; the captured image is never uploaded and the temporary file is deleted immediately after recognition. Only the recognised text is sent for translation.</li>
