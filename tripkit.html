@@ -53,7 +53,7 @@
 <h1>トリップキット プライバシーポリシー</h1>
 <p class="meta">対象アプリ: トリップキット(Android アプリ / パッケージ名 <code>app.primarydice.tripkit</code>)</p>
 <p class="meta">提供者(デベロッパー): Primary Dice</p>
-<p class="meta">制定日: 2026年9月8日 / 最終更新日: 2026年9月27日</p>
+<p class="meta">制定日: 2026年9月8日 / 最終更新日: 2026年10月2日</p>
 
 <p>本プライバシーポリシー(以下「本ポリシー」)は、上記提供者(以下「当方」)が提供する Android アプリケーション「トリップキット」(以下「本アプリ」)における、利用者の情報の取り扱いについて定めるものです。本アプリは、海外旅行の準備と旅先での困りごとを助けるアプリで、したくリスト、到着ガイド、両替の計算、翻訳、使ったお金の記録、AI による行程表づくりと相談、AI によるスポット・グルメさがし、AI による乗り物ガイド、旅の記録と日記の下書きの機能があります。本アプリをご利用いただく前に、本ポリシーをお読みください。本アプリをインストールしてご利用になった場合、本ポリシーの内容に同意いただいたものとみなします。</p>
 
@@ -206,7 +206,7 @@
   <li><strong>位置情報(GPS)</strong> — 権限そのものを要求していません</li>
   <li><strong>端末内の写真・動画・ファイルの一覧</strong> — 権限を要求していません。日記に使う写真は、Android の標準の選択画面で利用者が選んだものだけを読みます(日記に貼った写真は端末内に保存されますが、当方は受け取りません)</li>
   <li>連絡先、マイク(音声)、通話履歴、SMS、カレンダー</li>
-  <li>アプリの利用状況・操作ログ・クラッシュレポート等の解析データ</li>
+  <li>当方による、アプリの利用状況・操作ログ・クラッシュレポート等の解析データ(カメラ翻訳の文字認識の部品が Google へ送る利用状況については「5. 端末の権限とネットワーク通信」の一覧をご参照ください)</li>
   <li>IMEI、MAC アドレス、電話番号などの端末固有の番号(端末の識別子として用いるのは、上記の「端末の印」= ANDROID_ID を一方向に変換したものだけです)</li>
 </ul>
 
@@ -300,7 +300,7 @@
 
 <div class="box">
 <h3>カメラで撮った画像について</h3>
-<p>「カメラで撮る」で撮影した画像から文字を読み取る処理(OCR)は、<strong>端末の中だけで完結します。</strong>Google の ML Kit の、端末内で動く文字認識の部品を同梱しており、画像をインターネットへ送ることはありません。撮影した画像は読み取りのために一時的にアプリ内の作業領域へ書き出され、<strong>読み取りが終わり次第、自動的に削除されます。</strong>外部へ送られるのは、読み取られた文字だけです。</p>
+<p>「カメラで撮る」で撮影した画像から文字を読み取る処理(OCR)は、<strong>端末の中だけで完結します。</strong>Google の ML Kit の、端末内で動く文字認識の部品を同梱しており、画像をインターネットへ送ることはありません。撮影した画像は読み取りのために一時的にアプリ内の作業領域へ書き出され、<strong>読み取りが終わり次第、自動的に削除されます。</strong>翻訳のために外部へ送られるのは、読み取られた文字だけです。なお、文字認識の部品は、画像や文字とは別に、部品の利用状況(端末の機種や処理時間など)を Google へ送ります(「5. 端末の権限とネットワーク通信」の一覧を参照)。</p>
 </div>
 
 <div class="box note">
@@ -348,7 +348,7 @@
 
 <h3>本アプリ自身が使用するその他の権限</h3>
 <ul>
-  <li><code>INTERNET</code> — AI・翻訳・為替レート・広告の通信と、ホーム画面と、行程表を作っているあいだに表示する観光地の写真の受け取りに使用します。</li>
+  <li><code>INTERNET</code> — AI・翻訳・為替レート・広告の通信と、ホーム画面と、行程表を作っているあいだに表示する観光地の写真の受け取りに使用します。また、カメラ翻訳の文字認識に使う Google の部品(ML Kit)が、部品の利用状況を Google へ送るためにも使われます。</li>
   <li><code>ACCESS_NETWORK_STATE</code> — 通信できる状態かどうかを判定するために使用します。通信の内容を読み取るものではありません。</li>
   <li><code>RECEIVE_BOOT_COMPLETED</code> — 端末を再起動したあとも、予約済みのお知らせが消えないようにするために使用します。</li>
 </ul>
@@ -380,9 +380,14 @@
   <td class="wrap">画面に表示する広告を受け取るため</td>
   <td class="wrap">広告 ID、IP アドレス、端末の種類・OS・言語・画面サイズなどの一般的な端末情報、広告の表示・クリックの記録。旅の記録や写真は送信されません</td>
 </tr>
+<tr>
+  <td class="wrap">Google(ML Kit の利用状況の送信)</td>
+  <td class="wrap">カメラ翻訳の文字認識に使う Google の部品(ML Kit)が、部品の動作を改善するために送るもの</td>
+  <td class="wrap">利用状況(端末の機種・OS のバージョン、アプリの名前とバージョン、読み取りにかかった時間、画像の大きさ、エラーの種類、インストールごとに割り振られる番号など。利用者や端末を特定するためのものではありません)。<strong>撮った画像と読み取った文字は送られません。</strong>詳しくは<a href="https://developers.google.com/ml-kit/android-data-disclosure">ML Kit のデータの取り扱いに関する説明</a>をご参照ください</td>
+</tr>
 </table>
 
-<p>本アプリが行う通信は、上記の3つだけです。したくリスト、到着ガイド、両替の計算(取得済みのレートを使う場合)、使ったお金の記録、翻訳した文の読み返しは、通信のない場所(圏外・機内モード)でもお使いいただけます。</p>
+<p>本アプリが行う通信は、上記の4つだけです。したくリスト、到着ガイド、両替の計算(取得済みのレートを使う場合)、使ったお金の記録、翻訳した文の読み返しは、通信のない場所(圏外・機内モード)でもお使いいただけます。</p>
 
 <p>なお、インターネット通信という仕組み上、接続元の IP アドレスなど一般的な通信記録が、通信先である外部サービス側に残る場合があります。これは当方が取得・保存するものではありません。</p>
 
@@ -447,7 +452,7 @@
 <tr>
   <td class="wrap">Google ML Kit 文字認識(<code>com.google.mlkit:text-recognition</code>)</td>
   <td class="wrap">カメラで撮った画像から文字を読み取る</td>
-  <td class="wrap"><strong>データの送信はありません。</strong>認識用のモデルをアプリに同梱しており、端末内だけで処理します</td>
+  <td class="wrap"><strong>撮った画像と読み取った文字は送信されません。</strong>認識用のモデルをアプリに同梱しており、端末内だけで処理します。部品の利用状況(端末の機種、処理時間など)が Google へ送られます(「5. 端末の権限とネットワーク通信」の一覧を参照)</td>
 </tr>
 <tr>
   <td class="wrap">Cloudflare Workers</td>
@@ -532,7 +537,7 @@
 <p>本アプリは、13歳未満の子どもを対象としたものではなく、Google Play においても対象年齢を13歳以上として登録しています。当方は、いずれの利用者からも個人を識別できる情報を取得しません。</p>
 
 <h2>13. 国外への移転について</h2>
-<p>「3. AI と翻訳について」および「8. 本アプリが利用している第三者サービス」に記載のとおり、AI・翻訳・広告・中継サーバーの処理は、日本国外(米国等)のサーバーで行われる場合があります。本アプリをご利用いただくことで、これに同意いただいたものとみなします。</p>
+<p>「3. AI と翻訳について」および「8. 本アプリが利用している第三者サービス」に記載のとおり、AI・翻訳・広告・中継サーバーの処理と、文字認識の部品(ML Kit)が送る利用状況の受け取りは、日本国外(米国等)のサーバーで行われる場合があります。本アプリをご利用いただくことで、これに同意いただいたものとみなします。</p>
 
 <h2>14. 本ポリシーの変更</h2>
 <p>法令の変更、機能の追加、利用する外部サービスの変更などに応じて、本ポリシーを変更することがあります。変更した場合は、本ページの「最終更新日」を更新し、本ページ上で公表します。重要な変更を行う場合は、アプリ内でもお知らせします。</p>
@@ -557,7 +562,7 @@
   <li><strong>What is sent when you use AI or translation.</strong> These features route through a relay server operated by the developer (<code>tripkit-worker.primarydice.workers.dev</code>, on Cloudflare Workers) and then to <strong>Anthropic (Claude API)</strong> or <strong>Microsoft Azure Translator</strong>. Sent content includes your destination country, trip length, your typed question, that day's itinerary and expense summary, and photo time-of-day data. The spot &amp; food search sends only the chosen country, an optional town name you type, and the category (sights, local dishes, street food, souvenirs or activities). Itinerary generation also sends your chosen travel style (pace, transport preference and whether to use guided tours) and, if entered, the cities you want to visit (picked from a list or typed by you), flight airports/times and hotel names. The transport guide sends only the chosen country (plus the device string, for ticket counting) — no dates, itinerary, town names or preferences; the AI then searches the web for current fares <strong>within Anthropic's service</strong>, and your device never connects to a search engine for this. Itinerary generation may also search the web for current admission fees of the sights (by sight name), and the AI advice feature searches the web once, based on your question, only when you ask about prices or opening hours; the spot &amp; food search also searches the web once (country, optional town name and category) and names shops or tour operators only if confirmed by that search — all within Anthropic's service. <strong>Apart from the transport guides described below, the relay server does not store any of this</strong> — it only logs aggregate character counts, with no content.</li>
   <li><strong>"View in Google Maps".</strong> Spot &amp; food search results have a button that opens Google Maps (the app, or a browser) with a search phrase such as "Shilin Night Market". <strong>That phrase is passed to Google only when you tap the button</strong>, and is then handled under <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>. The app does not access your location for this. Search results are stored only on your device (up to 20 searches) and are deleted together with the trip.</li>
   <li><strong>Destination photos.</strong> On the home screen and while an itinerary is being generated, the app shows photos of famous sights in your destination country, downloaded from the same relay server. The request reveals only which country's photos are fetched (via the file name); no trip details or device string are sent. The photos are resized copies of public-domain images from Wikimedia Commons (CC0 / public domain) and Unsplash (Unsplash License), which need no attribution. The app never connects to Unsplash either. The app never connects to Wikimedia.</li>
-  <li><strong>Camera translation runs on-device.</strong> Text recognition uses Google ML Kit's bundled on-device model; the captured image is never uploaded and the temporary file is deleted immediately after recognition. Only the recognised text is sent for translation.</li>
+  <li><strong>Camera translation runs on-device.</strong> Text recognition uses Google ML Kit's bundled on-device model; the captured image is never uploaded and the temporary file is deleted immediately after recognition. Only the recognised text is sent for translation. ML Kit itself sends usage and diagnostic data to Google (device model, OS version, app name and version, processing time, image size, error codes, and a per-installation identifier not intended to identify you or your device); images and recognised text are not included.</li>
   <li><strong>Please do not type personal data</strong> such as names, addresses, card numbers or passport numbers into the AI or translation fields, as that text is passed to the external services.</li>
   <li><strong>What the developer's server does store.</strong> Only four things: (1) each country's finished transport guide (text, source pages and research time), kept for 7 days so the next user who asks for the same country gets it immediately, without a new web search — <strong>it is not linked to any device string and records nothing about who requested it</strong>; (2) a wallet record keyed by a <strong>24-character device string</strong> holding how many AI uses remain and the pass expiry date; (3) a transfer code used for changing phones; and (4) each country's admission fees (sight names and yen amounts) that the AI verified on the web while generating an itinerary, kept for 7 days so the next itinerary for that country needs no new search — <strong>not linked to any device string or trip</strong>. The wallet record and transfer code expire automatically after 500 days. Since September 20, 2026, the device string is derived on-device by mixing Android's per-app identifier (ANDROID_ID) with a fixed value and hashing it one-way (SHA-256); <strong>ANDROID_ID itself never leaves the device and cannot be recovered from the string.</strong> The string stays the same if you reinstall the app (so purchased balances are not lost), is not linked to your name, account, phone number or advertising ID, and falls back to a random string on devices where ANDROID_ID is unavailable.</li>
   <li><strong>In-app purchase.</strong> An optional "Trip Pass" adds AI usage. <strong>Payment is handled entirely by Google Play</strong>; the developer never receives or sees card numbers, bank details, names or addresses. All non-AI features remain fully available without purchasing.</li>
@@ -567,11 +572,11 @@
   <li><strong>Backups are disabled.</strong> The app explicitly opts out of Android Auto Backup and device-to-device transfer, so trip records are never copied to Google Drive or another phone without your action. To move to a new phone, export a backup file yourself from the Records screen (you choose where it goes), and move remaining AI uses with the transfer code. <strong>The backup file deliberately excludes the Trip Pass balance</strong>, so sharing the file cannot duplicate a paid pass.</li>
   <li><strong>Deletion.</strong> Delete individual trips or all expense records in-app, or use Settings → Apps → TripKit → Storage → Clear data, or uninstall. Server-side wallet data expires after 500 days; to request earlier deletion, contact the developer with your device string — note that this also permanently forfeits any purchased balance.</li>
   <li><strong>Other components:</strong> Capacitor, Google ML Kit text recognition (on-device), Cloudflare Workers (also hosts the destination photos), Wikimedia Commons and Unsplash (photo sources only; the app does not connect to them), Anthropic Claude API, Microsoft Azure Translator, ExchangeRate-API, Google AdMob, Google Play Billing. No analytics, crash-reporting, or tracking SDKs are bundled.</li>
-  <li><strong>International transfers.</strong> AI, translation, advertising and relay processing may take place on servers outside Japan, including the United States.</li>
+  <li><strong>International transfers.</strong> AI, translation, advertising, relay processing and ML Kit diagnostics may take place on servers outside Japan, including the United States.</li>
   <li><strong>Children.</strong> The app is not directed to children under 13 and is listed on Google Play with a 13+ target audience.</li>
   <li><strong>Contact:</strong> <a href="mailto:primarydice@gmail.com">primarydice@gmail.com</a></li>
 </ul>
-<p>Effective date: September 8, 2026. Last updated: September 26, 2026.</p>
+<p>Effective date: September 8, 2026. Last updated: October 2, 2026.</p>
 </div>
 
 </body>

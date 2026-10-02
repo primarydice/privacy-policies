@@ -53,7 +53,7 @@
 <h1>マネログ プライバシーポリシー</h1>
 <p class="meta">対象アプリ: マネログ(Android アプリ / パッケージ名 <code>app.primarydice.manelog</code>)</p>
 <p class="meta">提供者(デベロッパー): Primary Dice</p>
-<p class="meta">制定日: 2026年7月21日 / 最終更新日: 2026年9月15日(連絡先のメールアドレスを変更)</p>
+<p class="meta">制定日: 2026年7月21日 / 最終更新日: 2026年10月2日(レシートの文字認識の部品が Google へ送る利用状況を追記)</p>
 
 <p>本プライバシーポリシー(以下「本ポリシー」)は、上記提供者(以下「当方」)が提供する Android アプリケーション「マネログ」(以下「本アプリ」)における、利用者の情報の取り扱いについて定めるものです。本アプリをご利用いただく前に、本ポリシーをお読みください。本アプリをインストールしてご利用になった場合、本ポリシーの内容に同意いただいたものとみなします。</p>
 
@@ -115,7 +115,7 @@
   <li>クレジットカード番号、銀行口座番号、暗証番号、その他の金融認証情報</li>
   <li>位置情報(GPS)、連絡先、通話履歴、SMS、カレンダー</li>
   <li>広告 ID(AAID)、デバイス ID、IP アドレス等の識別子</li>
-  <li>アプリの利用状況・操作ログ・クラッシュレポート等の解析データ</li>
+  <li>当方による、アプリの利用状況・操作ログ・クラッシュレポート等の解析データ(レシートの文字認識の部品が Google へ送る利用状況については「7. 本アプリが利用している第三者技術」をご参照ください)</li>
 </ul>
 
 <div class="box note">
@@ -157,8 +157,8 @@
     </tr>
     <tr>
       <td class="wrap"><code>INTERNET</code><br>(ネットワーク通信)</td>
-      <td class="wrap">広告の読み込み</td>
-      <td class="wrap">画面上部に表示する広告を Google の広告配信サーバーから受け取るために使用します。<strong>利用者が記録した家計データが送信されることはありません</strong>。本アプリには家計データを外部へ送信する処理そのものが実装されていません。</td>
+      <td class="wrap">広告の読み込み、文字認識の部品の利用状況の送信</td>
+      <td class="wrap">画面上部に表示する広告を Google の広告配信サーバーから受け取るために使用します。また、レシートの文字認識に使う Google の部品(ML Kit)が、部品の利用状況を Google へ送るためにも使われます(下記「7.」参照。画像と読み取った文字は送られません)。<strong>利用者が記録した家計データが送信されることはありません</strong>。本アプリには家計データを外部へ送信する処理そのものが実装されていません。</td>
     </tr>
   </tbody>
 </table>
@@ -256,7 +256,7 @@
 </ul>
 
 <h2>7. 本アプリが利用している第三者技術</h2>
-<p>本アプリは以下の技術を利用しています。広告配信(Google AdMob)以外は、いずれも<strong>端末内で完結して動作し</strong>、外部へデータを送信しません。</p>
+<p>本アプリは以下の技術を利用しています。広告配信(Google AdMob)と、下記の ML Kit が送る利用状況を除き、いずれも<strong>端末内で完結して動作し</strong>、外部へデータを送信しません。</p>
 <table>
   <thead>
     <tr>
@@ -269,7 +269,7 @@
     <tr>
       <td class="wrap">Google ML Kit テキスト認識<br>(オンデバイス版)</td>
       <td class="wrap">レシート画像から文字を読み取る</td>
-      <td class="wrap">なし(端末内で処理が完結するオンデバイス版を使用。画像や認識結果が Google に送信されることはありません)</td>
+      <td class="wrap"><strong>画像と認識結果は送信されません</strong>(端末内で処理が完結するオンデバイス版を使用)。ただし、部品の動作を改善するために、利用状況(端末の機種・OS のバージョン、アプリの名前とバージョン、読み取りにかかった時間、画像の大きさ、エラーの種類、インストールごとに割り振られる番号など。利用者や端末を特定するためのものではありません)が Google へ送られます。家計データは含まれません。詳しくは<a href="https://developers.google.com/ml-kit/android-data-disclosure">ML Kit のデータの取り扱いに関する説明</a>をご参照ください。</td>
     </tr>
     <tr>
       <td class="wrap">PDF.js</td>
@@ -307,7 +307,7 @@
 <h2>9. 安全管理措置</h2>
 <ul>
   <li>本アプリのデータは、Android のアプリサンドボックス(アプリごとにデータ領域を分離する仕組み)によって保護され、他のアプリからアクセスできません。</li>
-  <li>本アプリは家計データを外部に送信しないため、通信経路上で家計の内容が漏えいするリスクがありません。通信するのは広告の読み込みのみで、その通信に家計データは含まれません。</li>
+  <li>本アプリは家計データを外部に送信しないため、通信経路上で家計の内容が漏えいするリスクがありません。通信するのは広告の読み込みと、文字認識の部品の利用状況の送信だけで、いずれにも家計データは含まれません。</li>
   <li>当方はデータを預からないため、当方側の情報漏えいによって利用者のデータが流出することはありません。</li>
   <li>端末の紛失・盗難に備え、画面ロック(パスワード・生体認証など)の設定をおすすめします。</li>
 </ul>
@@ -323,6 +323,7 @@
 <p>当方は利用者のデータを収集・保管しないため、当方による国外へのデータ移転は発生しません。ただし、以下の場合に、日本国外のサーバーとの通信または保管が発生します。いずれも取り扱いは Google のプライバシーポリシーに従います。</p>
 <ul>
   <li><strong>広告の表示:</strong> 広告を受け取るため、Google の広告配信サーバー(米国など)と通信します。このとき前記「6-1」の情報が Google へ送信されます。家計データは含まれません。</li>
+  <li><strong>文字認識の部品の利用状況:</strong> 前記「7.」の ML Kit の利用状況が、Google のサーバー(海外にある場合があります)へ送られます。レシートの画像、読み取った文字、家計データは含まれません。</li>
   <li><strong>Android 自動バックアップ:</strong> 前記「5-2」をご利用の場合、利用者ご自身のバックアップデータが日本国外のサーバーに保管される可能性があります。</li>
 </ul>
 
@@ -344,10 +345,10 @@
 <ul>
   <li><strong>No data collection by the developer.</strong> Manelog has no backend server. All data you enter (income, expenses, categories, memos, merchant names, budgets, subscriptions) is stored solely in your device's app-private storage. It is never transmitted to the developer or any third party.</li>
   <li><strong>No personal identifiers collected by the developer.</strong> The app does not require an account and the developer does not collect names, email addresses, phone numbers, location data, contacts, device identifiers, or advertising IDs.</li>
-  <li><strong>Camera.</strong> Used only to photograph receipts. Text recognition runs fully on-device via Google ML Kit (on-device model). The temporary image file is deleted immediately after processing. Neither the image nor the recognized text leaves the device.</li>
+  <li><strong>Camera.</strong> Used only to photograph receipts. Text recognition runs fully on-device via Google ML Kit (on-device model). The temporary image file is deleted immediately after processing. Neither the image nor the recognized text leaves the device. ML Kit itself sends usage and diagnostic data to Google (device model, OS version, app name and version, processing time, image size, error codes, and a per-installation identifier not intended to identify you or your device); receipt images, recognized text, and financial records are not included.</li>
   <li><strong>PDF import.</strong> Credit card statement PDFs that you explicitly select are parsed locally on the device. Their contents are never uploaded.</li>
   <li><strong>Usage access (PACKAGE_USAGE_STATS).</strong> Optional. Used only to display how many minutes you have spent this month in the specific apps corresponding to the subscriptions you registered (e.g. Netflix), so you can decide whether to keep paying for them. Only the aggregate foreground time in minutes is read; no app inventory, content, or activity details are accessed. The value is displayed on screen only, is not stored, and is never transmitted. All other features work without granting this permission, and it can be revoked at any time via Settings → Apps → Special app access → Usage access.</li>
-  <li><strong>Internet permission.</strong> Used only to load advertisements. Your financial records are never transmitted; the app contains no code that sends them anywhere.</li>
+  <li><strong>Internet permission.</strong> Used to load advertisements, and by ML Kit to send the diagnostic data described above. Your financial records are never transmitted; the app contains no code that sends them anywhere.</li>
   <li><strong>Android Auto Backup.</strong> Enabled. If backup is turned on for your Google account, your Manelog data may be backed up to your own Google Drive backup storage so it can be restored after a device change. This data belongs to your Google account; the developer cannot access it. You can disable this in Settings → Google → Backup.</li>
   <li><strong>Advertising.</strong> The app displays a banner ad at the top of the screen via <strong>Google AdMob</strong>. To serve ads, Google collects your advertising ID, IP address (and the coarse region inferred from it), general device information (model, OS version, language, screen size), and ad impression/click records. The developer does not receive, store, or view any of this. <strong>None of your financial records are used for advertising</strong> — they never leave your device. You can reset or delete your advertising ID at any time via Settings → Security &amp; privacy → More privacy settings → Ads. The app is distributed in Japan only and therefore does not include an EU/UK consent management platform; if distribution is expanded, consent will be implemented and this policy updated.</li>
   <li><strong>No analytics, no crash reporting, no tracking by the developer.</strong></li>
@@ -355,7 +356,7 @@
   <li><strong>Children.</strong> The app is not directed to children under 13 and collects no personal information from any user.</li>
   <li><strong>Contact:</strong> <a href="mailto:primarydice@gmail.com">primarydice@gmail.com</a></li>
 </ul>
-<p>Effective date: July 21, 2026. Last updated: September 15, 2026 (contact email address changed).</p>
+<p>Effective date: July 21, 2026. Last updated: October 2, 2026 (added the usage data that the text-recognition component sends to Google).</p>
 </div>
 
 </body>
