@@ -53,7 +53,7 @@
 <h1>トリップキット プライバシーポリシー</h1>
 <p class="meta">対象アプリ: トリップキット(Android アプリ / パッケージ名 <code>app.primarydice.tripkit</code>)</p>
 <p class="meta">提供者(デベロッパー): Primary Dice</p>
-<p class="meta">制定日: 2026年9月8日 / 最終更新日: 2026年10月2日</p>
+<p class="meta">制定日: 2026年9月8日 / 最終更新日: 2026年10月19日</p>
 
 <p>本プライバシーポリシー(以下「本ポリシー」)は、上記提供者(以下「当方」)が提供する Android アプリケーション「トリップキット」(以下「本アプリ」)における、利用者の情報の取り扱いについて定めるものです。本アプリは、海外旅行の準備と旅先での困りごとを助けるアプリで、したくリスト、到着ガイド、両替の計算、翻訳、使ったお金の記録、AI による行程表づくりと相談、AI によるスポット・グルメさがし、AI による乗り物ガイド、旅の記録と日記の下書きの機能があります。本アプリをご利用いただく前に、本ポリシーをお読みください。本アプリをインストールしてご利用になった場合、本ポリシーの内容に同意いただいたものとみなします。</p>
 
@@ -63,6 +63,7 @@
   <li><strong>旅の記録は、この端末の中だけに保存されます。</strong>行き先・日程・使ったお金・したくリスト・行程表・日記は、当方のサーバーへ送られません。当方は、利用者がどこへ行ったかを知る手段を持っていません。</li>
   <li><strong>写真は、この端末から出ません。</strong>日記の下書きを作るとき、本アプリは選ばれた写真の「撮った時刻」だけを端末の中で読み取ります。日記に貼った写真は端末の中に保存されますが、<strong>写真そのものも、写真に記録されている撮影場所(GPS)も、どこへも送りません。</strong></li>
   <li><strong>位置情報の権限を一切要求しません。</strong>カメラの権限も、写真フォルダを読む権限も要求しません。</li>
+  <li><strong>翻訳の「🎤 話す」を押したときだけ、マイクを使います。</strong>声の聞き取りは端末に入っている Google の音声入力が行い、本アプリが受け取るのは聞き取った文字だけです。本アプリが音声を録音・保存・送信することはありません。詳しくは「3. AI と翻訳について」をご覧ください。</li>
   <li><strong>アカウント登録は不要です。</strong>氏名・メールアドレス・電話番号など、個人を識別する情報は取得しません。</li>
   <li><strong>AI と翻訳を使うときだけ、必要な文が外部へ送られます。</strong>当方が運用する中継サーバーを通り、AI(Anthropic 社)または翻訳サービス(Microsoft 社)へ渡ります。<strong>中継サーバーは、その中身を保存しません。</strong>詳しくは「3. AI と翻訳について」をご覧ください。</li>
   <li><strong>ホーム画面と、行程表を作っているあいだに、行き先の国の観光地の写真を表示します。</strong>写真は当方の中継サーバーから受け取ります。このとき伝わるのは「どの国の写真か」(写真のファイル名)だけです。写真は Wikimedia Commons で公開されている、撮影者が権利を手放した写真(CC0・パブリックドメイン)と、Unsplash で公開されている写真(Unsplash License)で、どちらも撮影者名の表示を必要としないものです。</li>
@@ -205,7 +206,8 @@
   <li>アカウント情報(本アプリにログイン機能はありません)</li>
   <li><strong>位置情報(GPS)</strong> — 権限そのものを要求していません</li>
   <li><strong>端末内の写真・動画・ファイルの一覧</strong> — 権限を要求していません。日記に使う写真は、Android の標準の選択画面で利用者が選んだものだけを読みます(日記に貼った写真は端末内に保存されますが、当方は受け取りません)</li>
-  <li>連絡先、マイク(音声)、通話履歴、SMS、カレンダー</li>
+  <li>連絡先、通話履歴、SMS、カレンダー</li>
+  <li><strong>音声</strong> — 翻訳の「🎤 話す」で話した声は、端末の音声入力(Google)が文字にします。本アプリが受け取るのは文字だけで、音声は受け取りません</li>
   <li>当方による、アプリの利用状況・操作ログ・クラッシュレポート等の解析データ(カメラ翻訳の文字認識の部品が Google へ送る利用状況については「5. 端末の権限とネットワーク通信」の一覧をご参照ください)</li>
   <li>IMEI、MAC アドレス、電話番号などの端末固有の番号(端末の識別子として用いるのは、上記の「端末の印」= ANDROID_ID を一方向に変換したものだけです)</li>
 </ul>
@@ -303,6 +305,13 @@
 <p>「カメラで撮る」で撮影した画像から文字を読み取る処理(OCR)は、<strong>端末の中だけで完結します。</strong>Google の ML Kit の、端末内で動く文字認識の部品を同梱しており、画像をインターネットへ送ることはありません。撮影した画像は読み取りのために一時的にアプリ内の作業領域へ書き出され、<strong>読み取りが終わり次第、自動的に削除されます。</strong>翻訳のために外部へ送られるのは、読み取られた文字だけです。なお、文字認識の部品は、画像や文字とは別に、部品の利用状況(端末の機種や処理時間など)を Google へ送ります(「5. 端末の権限とネットワーク通信」の一覧を参照)。</p>
 </div>
 
+<div class="box">
+<h3>声で入力する・読み上げる機能について</h3>
+<p><strong>「🎤 話す」(声で入力)</strong> — 押すと、端末に元から入っている音声入力(Google の音声認識サービス)の画面が開き、話した声を文字にします。本アプリはマイクの権限(<code>RECORD_AUDIO</code>)を持ちますが、<strong>本アプリ自身は音声を録音・保存・送信しません。</strong>音声は Google の音声認識サービスが処理し、インターネット経由で Google のサーバーへ送られる場合があります。その取り扱いは<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google のプライバシーポリシー</a>によります。本アプリが受け取るのは聞き取られた<strong>文字だけ</strong>で、その文字は、文字を入力したときと同じように翻訳に使われます。</p>
+<p><strong>「🔊 読み上げ」</strong> — 訳した文や「よく使う言葉」を、端末の読み上げ機能(テキスト読み上げ)で声にします。読み上げる文は、端末で選ばれている読み上げエンジン(多くの機種では Google の音声サービス)へ渡され、声の種類によってはそのサーバーで音声に変換されます。本アプリが読み上げた文を保存・送信することはありません。</p>
+<p>どちらも、押したときにだけ動きます。マイクの使用は、最初に「🎤 話す」を押したときに許可を求めます。許可しない場合も、声の入力が使えないだけで、他の機能はすべてお使いいただけます。</p>
+</div>
+
 <div class="box note">
 <h3>お願い</h3>
 <p>相談の文や、訳したい文には、<strong>氏名・住所・電話番号・クレジットカード番号・パスポート番号などを入力しないでください。</strong>これらを入力すると、その文がそのまま外部のサービスへ渡ります。当方はこれらの内容を保存しませんが、送られた先での取り扱いは各社のポリシーによります。</p>
@@ -332,6 +341,7 @@
 <h3>利用者に許可を求める権限</h3>
 <ul>
   <li><strong>POST_NOTIFICATIONS(通知)</strong> — 出発の30日前・2週間前・1週間前・前日の朝に、したくリストの確認をお知らせするために使用します。<strong>お知らせを最初にオンにするときに、はじめて許可を求めます。</strong>許可しない場合もお知らせが届かないだけで、他の機能はすべてお使いいただけます。お知らせの内容は端末内で組み立てており、外部へ送信されません。</li>
+  <li><strong>RECORD_AUDIO(マイク)</strong> — 翻訳の「🎤 話す」で、話した声を文字にするために使用します。<strong>最初に「🎤 話す」を押したときに、はじめて許可を求めます。</strong>本アプリは音声を録音・保存・送信しません(「3. AI と翻訳について」の「声で入力する・読み上げる機能について」を参照)。許可しない場合も、声の入力が使えないだけで、他の機能はすべてお使いいただけます。</li>
 </ul>
 
 <div class="box">
@@ -343,7 +353,7 @@
   <li><strong>写真・ファイルの読み取り(READ_MEDIA_IMAGES 等)</strong> — 日記に使う写真は Android の標準の選択画面を通すため、フォルダ全体を読む権限は不要です。利用者が選んだ写真だけが渡されます。</li>
   <li><strong>SCHEDULE_EXACT_ALARM(ぴったりの時刻に鳴らす)</strong> — お知らせが数分ずれても差し支えないため、明示的に削除しています。</li>
 </ul>
-<p>また本アプリは、カメラのない端末にも配信できるよう、カメラを「必須ではない」(<code>required="false"</code>)として宣言しています。</p>
+<p>また本アプリは、カメラやマイクのない端末にも配信できるよう、カメラとマイクを「必須ではない」(<code>required="false"</code>)として宣言しています。</p>
 </div>
 
 <h3>本アプリ自身が使用するその他の権限</h3>
@@ -387,7 +397,7 @@
 </tr>
 </table>
 
-<p>本アプリが行う通信は、上記の4つだけです。したくリスト、到着ガイド、両替の計算(取得済みのレートを使う場合)、使ったお金の記録、翻訳した文の読み返しは、通信のない場所(圏外・機内モード)でもお使いいただけます。</p>
+<p>本アプリが行う通信は、上記の4つだけです。なお、「🎤 話す」と「🔊 読み上げ」では、端末に入っている Google の音声入力・読み上げの仕組みが、それぞれの処理のために Google と通信する場合があります(本アプリの通信ではありません)。したくリスト、到着ガイド、両替の計算(取得済みのレートを使う場合)、使ったお金の記録、翻訳した文の読み返しは、通信のない場所(圏外・機内モード)でもお使いいただけます。</p>
 
 <p>なお、インターネット通信という仕組み上、接続元の IP アドレスなど一般的な通信記録が、通信先である外部サービス側に残る場合があります。これは当方が取得・保存するものではありません。</p>
 
@@ -453,6 +463,16 @@
   <td class="wrap">Google ML Kit 文字認識(<code>com.google.mlkit:text-recognition</code>)</td>
   <td class="wrap">カメラで撮った画像から文字を読み取る</td>
   <td class="wrap"><strong>撮った画像と読み取った文字は送信されません。</strong>認識用のモデルをアプリに同梱しており、端末内だけで処理します。部品の利用状況(端末の機種、処理時間など)が Google へ送られます(「5. 端末の権限とネットワーク通信」の一覧を参照)</td>
+</tr>
+<tr>
+  <td class="wrap">端末の音声入力(Google の音声認識サービス)<br>(<code>@capacitor-community/speech-recognition</code> で呼び出し)</td>
+  <td class="wrap">翻訳の「🎤 話す」で、話した声を文字にする</td>
+  <td class="wrap">音声は Google の音声認識サービスが処理し、Google のサーバーへ送られる場合があります。本アプリは音声を受け取らず、聞き取った文字だけを受け取ります。取り扱いは<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google プライバシーポリシー</a>によります</td>
+</tr>
+<tr>
+  <td class="wrap">端末の読み上げ機能(テキスト読み上げ)<br>(<code>@capacitor-community/text-to-speech</code> で呼び出し)</td>
+  <td class="wrap">訳した文や「よく使う言葉」を声にする</td>
+  <td class="wrap">読み上げる文が、端末で選ばれている読み上げエンジン(多くの機種では Google の音声サービス)へ渡されます。声の種類によっては、そのサーバーで音声に変換されます</td>
 </tr>
 <tr>
   <td class="wrap">Cloudflare Workers</td>
@@ -558,7 +578,8 @@
   <li><strong>Your trip records stay on your device.</strong> Destinations, dates, expenses, checklists, itineraries and diaries are stored only in the app's local storage. They are never sent to the developer's server. The developer has no way to know where you travelled.</li>
   <li><strong>Photos never leave your device.</strong> When drafting a diary, the app reads only the first ~64 KB of each selected photo, on-device, to extract the <em>capture time</em>. Only counts such as "3 photos around 8am on day 2" are sent to the relay server, which passes just the time of day (morning, afternoon or evening) to the AI — not the counts. <strong>The image data itself is never transmitted, and GPS coordinates embedded in photos are neither read nor sent.</strong> The selected photos are also saved on your device only (resized, with all Exif/GPS data removed) and placed between the diary's paragraphs.</li>
   <li><strong>No location permission.</strong> The app never requests location access. It also requests no camera permission (it invokes the device's own camera app) and no photo-library permission (photos are chosen through Android's standard picker).</li>
-  <li><strong>No account, no personal identifiers.</strong> There is no sign-up or login. The developer collects no names, email addresses, phone numbers, contacts, microphone audio, or device identifiers.</li>
+  <li><strong>No account, no personal identifiers.</strong> There is no sign-up or login. The developer collects no names, email addresses, phone numbers, contacts, audio recordings, or device identifiers.</li>
+  <li><strong>Voice input and read-aloud (added October 19, 2026).</strong> The translation screen's 🎤 button opens the device's built-in Google speech recognition, which turns your speech into text; the app requests <code>RECORD_AUDIO</code> the first time you tap it. <strong>The app itself never records, stores or transmits audio</strong> — it receives only the recognised text, which is then translated like typed text. Audio is processed by Google's speech service and may be sent to Google's servers under <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>. The 🔊 button reads translations and phrases aloud with the device's text-to-speech engine (usually Google's), which may synthesise the voice on its servers. Both run only when you tap them. The microphone is declared as not required, so the app is still offered to devices without one.</li>
   <li><strong>What is sent when you use AI or translation.</strong> These features route through a relay server operated by the developer (<code>tripkit-worker.primarydice.workers.dev</code>, on Cloudflare Workers) and then to <strong>Anthropic (Claude API)</strong> or <strong>Microsoft Azure Translator</strong>. Sent content includes your destination country, trip length, your typed question, that day's itinerary and expense summary, and photo time-of-day data. The spot &amp; food search sends only the chosen country, an optional town name you type, and the category (sights, local dishes, street food, souvenirs or activities). Itinerary generation also sends your chosen travel style (pace, transport preference and whether to use guided tours) and, if entered, the cities you want to visit (picked from a list or typed by you), flight airports/times and hotel names. The transport guide sends only the chosen country (plus the device string, for ticket counting) — no dates, itinerary, town names or preferences; the AI then searches the web for current fares <strong>within Anthropic's service</strong>, and your device never connects to a search engine for this. Itinerary generation may also search the web for current admission fees of the sights (by sight name), and the AI advice feature searches the web once, based on your question, only when you ask about prices or opening hours; the spot &amp; food search also searches the web once (country, optional town name and category) and names shops or tour operators only if confirmed by that search — all within Anthropic's service. <strong>Apart from the transport guides described below, the relay server does not store any of this</strong> — it only logs aggregate character counts, with no content.</li>
   <li><strong>"View in Google Maps".</strong> Spot &amp; food search results have a button that opens Google Maps (the app, or a browser) with a search phrase such as "Shilin Night Market". <strong>That phrase is passed to Google only when you tap the button</strong>, and is then handled under <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>. The app does not access your location for this. Search results are stored only on your device (up to 20 searches) and are deleted together with the trip.</li>
   <li><strong>Destination photos.</strong> On the home screen and while an itinerary is being generated, the app shows photos of famous sights in your destination country, downloaded from the same relay server. The request reveals only which country's photos are fetched (via the file name); no trip details or device string are sent. The photos are resized copies of public-domain images from Wikimedia Commons (CC0 / public domain) and Unsplash (Unsplash License), which need no attribution. The app never connects to Unsplash either. The app never connects to Wikimedia.</li>
@@ -571,12 +592,12 @@
   <li><strong>Distribution and consent.</strong> The app is distributed in Japan only, but because it is a travel app it is expected to be opened abroad. Google's User Messaging Platform is therefore integrated; if the app is opened in the EU, UK or Switzerland and consent cannot be confirmed, <strong>no ads are shown at all</strong>. All app features continue to work.</li>
   <li><strong>Backups are disabled.</strong> The app explicitly opts out of Android Auto Backup and device-to-device transfer, so trip records are never copied to Google Drive or another phone without your action. To move to a new phone, export a backup file yourself from the Records screen (you choose where it goes), and move remaining AI uses with the transfer code. <strong>The backup file deliberately excludes the Trip Pass balance</strong>, so sharing the file cannot duplicate a paid pass.</li>
   <li><strong>Deletion.</strong> Delete individual trips or all expense records in-app, or use Settings → Apps → TripKit → Storage → Clear data, or uninstall. Server-side wallet data expires after 500 days; to request earlier deletion, contact the developer with your device string — note that this also permanently forfeits any purchased balance.</li>
-  <li><strong>Other components:</strong> Capacitor, Google ML Kit text recognition (on-device), Cloudflare Workers (also hosts the destination photos), Wikimedia Commons and Unsplash (photo sources only; the app does not connect to them), Anthropic Claude API, Microsoft Azure Translator, ExchangeRate-API, Google AdMob, Google Play Billing. No analytics, crash-reporting, or tracking SDKs are bundled.</li>
+  <li><strong>Other components:</strong> Capacitor, Google ML Kit text recognition (on-device), the device's speech recognition and text-to-speech (Google), Cloudflare Workers (also hosts the destination photos), Wikimedia Commons and Unsplash (photo sources only; the app does not connect to them), Anthropic Claude API, Microsoft Azure Translator, ExchangeRate-API, Google AdMob, Google Play Billing. No analytics, crash-reporting, or tracking SDKs are bundled.</li>
   <li><strong>International transfers.</strong> AI, translation, advertising, relay processing and ML Kit diagnostics may take place on servers outside Japan, including the United States.</li>
   <li><strong>Children.</strong> The app is not directed to children under 13 and is listed on Google Play with a 13+ target audience.</li>
   <li><strong>Contact:</strong> <a href="mailto:primarydice@gmail.com">primarydice@gmail.com</a></li>
 </ul>
-<p>Effective date: September 8, 2026. Last updated: October 2, 2026.</p>
+<p>Effective date: September 8, 2026. Last updated: October 19, 2026.</p>
 </div>
 
 </body>
