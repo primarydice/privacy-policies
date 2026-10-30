@@ -54,7 +54,7 @@
 <p class="meta">対象アプリ: SA・PAナビ(Android アプリ)</p>
 <p class="meta">パッケージ名: <code>app.primarydice.sapanavi</code></p>
 <p class="meta">提供者(デベロッパー): Primary Dice</p>
-<p class="meta">制定日: 2026年10月24日 / 最終更新日: 2026年10月24日</p>
+<p class="meta">制定日: 2026年10月24日 / 最終更新日: 2026年10月31日</p>
 
 <p>本プライバシーポリシー(以下「本ポリシー」)は、上記提供者(以下「当方」)が提供する高速道路のサービスエリア・パーキングエリア案内アプリケーション「SA・PAナビ」(以下「本アプリ」)における、利用者の情報の取り扱いについて定めるものです。本アプリは、乗るインターチェンジ(IC)と降りる IC を選ぶと、そのあいだにあるサービスエリア・パーキングエリア(以下「SA・PA」)と、それぞれのお店・コンビニ・ガソリンスタンドを順番に示し、走行中は次の SA・PA までの距離を表示するアプリです。高速道路の道路網と SA・PA の情報はアプリ内部に同梱しており、ルートの計算も端末の中で行います。本アプリをご利用いただく前に、本ポリシーをお読みください。本アプリをインストールまたはご利用になった場合、本ポリシーの内容に同意いただいたものとみなします。</p>
 
@@ -62,8 +62,8 @@
   <h3>このポリシーの要点(6行まとめ)</h3>
   <ul>
     <li>アカウント登録は不要です。当方のサーバーが受け取るのは、<strong>利用者が「意見箱」で「送る」を押したときの内容だけ</strong>です。それ以外の操作内容や個人情報を当方へ送信することはありません。</li>
-    <li><strong>位置情報は、ナビ(いまどこを走っているか・次の SA・PA までの距離)の計算に使います。</strong>「ナビ開始」「現在地」「目的地なしで走る」を押したときにだけ許可を求めます。<strong>当方へは送信せず、保存もしません。</strong>許可しなくても、ルートと SA・PA の一覧や検索はそのまま使えます。</li>
-    <li>端末内に保存されるのは、<strong>「よく使うルート」「一覧の見せ方」「音声案内の設定と、音声で知らせる SA・PA」「意見箱の書きかけ」</strong>だけです。本アプリは Android の自動バックアップと端末間コピーを<strong>両方とも無効に設定している</strong>ため、これらが Google ドライブへ保存されたり、他の端末へコピーされたりすることはありません。</li>
+    <li><strong>位置情報は、ナビ(いまどこを走っているか・次の SA・PA までの距離)の計算に使います。</strong>「ナビ開始」「現在地」「目的地なしで走る」を押したときにだけ許可を求めます。<strong>ナビ中は、アプリを閉じても案内を続けるために位置情報を使い続けます</strong>(そのあいだは通知が出ていて、ナビを終えると止まります)。<strong>当方へは送信せず、保存もしません。</strong>許可しなくても、ルートと SA・PA の一覧や検索はそのまま使えます。</li>
+    <li>端末内に保存されるのは、<strong>「よく使うルート」「一覧の見せ方」「音声案内の設定と、音声で知らせる SA・PA」「ナビ中のルート(ナビを終えると消えます)」「意見箱の書きかけ」</strong>だけです。本アプリは Android の自動バックアップと端末間コピーを<strong>両方とも無効に設定している</strong>ため、これらが Google ドライブへ保存されたり、他の端末へコピーされたりすることはありません。</li>
     <li><strong>意見箱で送った内容</strong>(種類・施設の名前・書いた文・見ていたルートの IC の名前・アプリと Android の版)は、当方のサーバーに保管し、アプリを直すためにだけ使います。<strong>名前・メールアドレス・位置情報は送られません。</strong></li>
     <li><strong>本アプリは広告を表示します。</strong>広告は Google の配信サービス(Google AdMob)によるもので、広告を出すために Google が<strong>広告 ID</strong> などを取得します。<strong>位置情報が広告に使われることはありません。</strong></li>
     <li>アクセス解析ツールの組み込みや、当方による行動追跡(トラッキング)は<strong>行いません</strong>。</li>
@@ -103,6 +103,12 @@
       <td class="wrap">端末内のみ</td>
     </tr>
     <tr>
+      <td class="wrap">ナビ中のルート</td>
+      <td class="wrap">走っているルートの線と距離、ルート上の SA・PA・IC の番号(現在地そのものは含みません。ただし、現在地から引き直したルートの線は、引き直した地点から始まります)</td>
+      <td class="wrap">ナビを始めたときと、ナビ中にルートが変わったとき</td>
+      <td class="wrap">端末内のみ。アプリを閉じたあとに開き直したとき、ナビの続きを出すために保持されます。<strong>ナビを終えると消去されます。</strong></td>
+    </tr>
+    <tr>
       <td class="wrap">意見箱の書きかけ</td>
       <td class="wrap">意見箱に書いている途中の種類・施設の名前・文</td>
       <td class="wrap">意見箱に書いているあいだ</td>
@@ -111,7 +117,7 @@
     <tr>
       <td class="wrap">位置情報(現在地)</td>
       <td class="wrap">端末の現在地の緯度・経度、進んでいる向き・速さ、位置の正確さ</td>
-      <td class="wrap"><strong>利用者が「ナビ開始」「現在地」「目的地なしで走る」を押したとき、およびナビを終了するまでのあいだのみ。</strong>アプリの起動時や、それ以外の場面では取得しません。</td>
+      <td class="wrap"><strong>利用者が「ナビ開始」「現在地」「目的地なしで走る」を押したとき、およびナビを終了するまでのあいだのみ(ナビ中はアプリを閉じていても取得します)。</strong>アプリの起動時や、それ以外の場面では取得しません。</td>
       <td class="wrap"><strong>保存しません。</strong>ナビの計算をするあいだ、アプリの動作中のメモリ上にあるだけで、端末にも当方にも記録されません。</td>
     </tr>
     <tr>
@@ -127,6 +133,7 @@
   <h3>位置情報の取り扱いについて</h3>
   <p>本アプリが現在地を使うのは、<strong>ナビのため</strong>です。具体的には、ルートのどこを走っているか、次の SA・PA・ガソリンスタンド・降りる IC までの距離、ルートを外れたときの引き直し、音声案内を読み上げる時機を、端末の中で計算するために使います。「現在地」を押したときは、いまの場所から乗れる高速道路を探してルートを作るために使います。それ以外の使い道はありません。</p>
   <p>これらの計算は端末の中で行い、現在地の緯度・経度を<strong>当方のサーバーへ送信することはありません</strong>。意見箱で送る内容にも、位置情報は含まれません。また、端末内に保存することもしないため、走った道の履歴が蓄積されることもありません。</p>
+  <p><strong>ナビ中にアプリを閉じたとき:</strong> ホームに戻る・ほかのアプリに切り替える・画面を消す・最近使ったアプリの一覧から消す、のいずれをしても、ナビを終えるまでは案内(通知の距離の表示と音声案内)を続けるために現在地を使います。このあいだは通知が出ていて、通知の「ナビを終了」からいつでも止められます(通知を許可していない場合は通知が見えないので、アプリを開いて「終了」を押してください)。アプリを閉じたままルートの終わりに着いたときや、2時間進まなかったときは、自動で止まります。<strong>ナビをしていないときに、アプリを閉じたまま現在地を使うことはありません。</strong></p>
   <p><strong>現在地の周辺が第三者に伝わるのは、次の場面だけです。</strong></p>
   <ul>
     <li><strong>ナビ中に地図が現在地の周りを表示するとき:</strong> その辺りの地図の画像(タイル)を国土地理院の地図配信サーバーから取り寄せるため、どの辺りの地図を表示しているか(区画の番号)が国土地理院に伝わります。緯度・経度そのものは送られません。</li>
@@ -169,13 +176,16 @@
 <ul>
   <li><strong>許可を求めるタイミング:</strong> 起動時ではなく、利用者が<strong>「ナビ開始」「現在地」「目的地なしで走る」のいずれかを押したときだけ</strong>です。</li>
   <li><strong>使用目的:</strong> 上記「位置情報の取り扱いについて」のとおり、ナビの計算のため。これ以外の目的では使用しません。「おおよその位置」だけを許可された場合は位置が数 km ずれるため、ナビが正しく動かないことをお知らせします。</li>
-  <li><strong>バックグラウンドでは取得しません。</strong>本アプリは <code>ACCESS_BACKGROUND_LOCATION</code> の権限を要求しておらず、アプリを閉じている間に位置を追跡する機能もありません。ナビ中は、案内が止まって見えないよう画面を消さない設定にしますが、ナビを終了すると元に戻ります。</li>
+  <li><strong>アプリを閉じて使うのは、ナビ中だけです。</strong>本アプリは <code>ACCESS_BACKGROUND_LOCATION</code>(常に許可)の権限を要求しておらず、位置情報の許可は「アプリの使用時のみ」のままで動きます。ナビ中にアプリを閉じても案内を続けられるのは、Android の「フォアグラウンドサービス」という仕組みを使っているためで、動いているあいだは通知が出ています。通知の「ナビを終了」かアプリの「終了」を押すと止まり、それ以降は位置情報を使いません。ナビ中は、案内が止まって見えないよう画面を消さない設定にしますが、ナビを終了すると元に戻ります。</li>
   <li><strong>許可しない場合も使えます。</strong>ナビ以外の機能は、そのままご利用いただけます。許可は端末の「設定」→「アプリ」→「SA・PAナビ」→「権限」→「位置情報」から、いつでも変更できます。</li>
 </ul>
 
 <h3>本アプリ自身が使用するその他の権限</h3>
 <ul>
   <li><code>INTERNET</code>(インターネット通信) — 地図の画像を取得し、広告を読み込み、意見箱の内容を送るために使用します。<strong>本アプリ自身の通信で、現在地の緯度・経度を送ることはありません。</strong></li>
+  <li><code>FOREGROUND_SERVICE</code> / <code>FOREGROUND_SERVICE_LOCATION</code>(フォアグラウンドサービス) — ナビ中にアプリを閉じても案内を続けるために使用します。動くのはナビ中だけです。</li>
+  <li><code>POST_NOTIFICATIONS</code>(通知) — ナビ中に、次の SA・PA までの距離と「ナビを終了」のボタンを通知に出すために使用します。「ナビ開始」などを押したときに許可を求めます。許可しなくてもナビは動きますが、通知は見えません。</li>
+  <li><code>WAKE_LOCK</code>(スリープの防止) — ナビ中に画面を消しても、案内が途中で止まらないようにするために使用します。</li>
 </ul>
 
 <h3>広告配信の仕組み(Google Mobile Ads SDK)が自動的に追加する権限</h3>
@@ -334,6 +344,7 @@
 <h2>8. データの保持期間と削除方法</h2>
 <ul>
   <li><strong>位置情報:</strong> そもそも保存していません。ナビを終了すれば、それ以上どこにも残りません。位置情報の許可そのものを取り消したい場合は、端末の「設定」→「アプリ」→「SA・PAナビ」→「権限」→「位置情報」から、いつでも「許可しない」に変更できます。</li>
+  <li><strong>ナビ中のルート:</strong> ナビを終えると自動で消去されます。</li>
   <li><strong>よく使うルート:</strong> 一覧の「×」で1件ずつ消せます。</li>
   <li><strong>音声で知らせる SA・PA:</strong> 音声案内の画面の「外す」で消せます。</li>
   <li><strong>端末内のデータをすべて消したい場合:</strong> 端末の「設定」→「アプリ」→「SA・PAナビ」→「ストレージ」→「データを消去」を実行してください。本アプリをアンインストールしても、端末内に保存されたデータはすべて削除されます。</li>
@@ -385,8 +396,8 @@
 <p>This is an English summary of the privacy policy for <strong>SA・PA Navi</strong> (Japanese title: SA・PAナビ, package <code>app.primarydice.sapanavi</code>), an Android app provided by <strong>Primary Dice</strong> ("the developer") that lists the service and parking areas (SA/PA) on Japanese expressways between two interchanges, together with their shops, convenience stores and fuel stations, and shows the distance to the next SA/PA while driving. The road network and the SA/PA data are bundled inside the app, and routes are calculated on the device. The Japanese text above is the authoritative version.</p>
 <ul>
   <li><strong>No account, minimal server use.</strong> The only data the developer's server ever receives is what you send through the in-app <strong>feedback box</strong> when you tap "Send". Nothing else you do in the app is transmitted to the developer.</li>
-  <li><strong>Location stays on your device.</strong> The app asks for location permission <strong>only when you tap "Start navigation", "Current location" or "Drive without destination"</strong>, and uses it solely to compute where you are on the route, distances to the next SA/PA, fuel station and exit, re-routing, and the timing of voice guidance. Location is <strong>never sent to the developer, never included in feedback, and never stored</strong>. Map tiles are fetched from the Geospatial Information Authority of Japan (GSI), which necessarily reveals <strong>which map area is on screen</strong> (as tile numbers); your actual coordinates are not sent. The app does not request background location. <strong>Declining is fine</strong>: routes, SA/PA lists, search and the map all keep working; only navigation is unavailable.</li>
-  <li><strong>What is stored on your device.</strong> Your frequently used routes (interchange names and positions, use count, last use, a "pin" flag; up to 30), the list view you chose, voice-guidance settings and the SA/PAs you asked to be announced, and an unsent feedback draft. Android Auto Backup and device-to-device transfer are <strong>both disabled</strong>, so none of this is copied to Google Drive or another device.</li>
+  <li><strong>Location stays on your device.</strong> The app asks for location permission <strong>only when you tap "Start navigation", "Current location" or "Drive without destination"</strong>, and uses it solely to compute where you are on the route, distances to the next SA/PA, fuel station and exit, re-routing, and the timing of voice guidance. Location is <strong>never sent to the developer, never included in feedback, and never stored</strong>. Map tiles are fetched from the Geospatial Information Authority of Japan (GSI), which necessarily reveals <strong>which map area is on screen</strong> (as tile numbers); your actual coordinates are not sent. During navigation only, guidance keeps running after you close the app, using an Android foreground service with a notification that lets you stop it at any time; it stops by itself when you reach the end of the route. The app does not request the "Allow all the time" background location permission and never uses location with the app closed when navigation is not running. <strong>Declining is fine</strong>: routes, SA/PA lists, search and the map all keep working; only navigation is unavailable.</li>
+  <li><strong>What is stored on your device.</strong> Your frequently used routes (interchange names and positions, use count, last use, a "pin" flag; up to 30), the list view you chose, voice-guidance settings and the SA/PAs you asked to be announced, the route of a navigation in progress (deleted when navigation ends), and an unsent feedback draft. Android Auto Backup and device-to-device transfer are <strong>both disabled</strong>, so none of this is copied to Google Drive or another device.</li>
   <li><strong>Feedback box.</strong> When you tap "Send", the app sends the category, the facility name (if entered), your text, the names of the start and end interchanges of the route you were viewing, and the app and Android versions to the developer's server (Cloudflare Workers / D1). <strong>No name, email address or location is sent.</strong> To prevent spam, your IP address is used to count submissions, but <strong>it is not stored</strong>; only an irreversible code derived from it with a salt that changes every day is kept. Feedback is used only to fix and improve the app, is not shared or sold, and is deleted once no longer needed. Cloudflare may process it outside Japan (e.g. in the Asia-Pacific region) and may keep short-term connection logs. Please do not include personal information in your text.</li>
   <li><strong>Voice guidance.</strong> Announcements such as "2 km ahead, Ebina service area" are read aloud by the Android text-to-speech engine installed on your device. Only fixed sentences built by the app (facility, junction and interchange names) are passed to it.</li>
   <li><strong>The app shows ads.</strong> Banner ads supplied by <strong>Google AdMob</strong> appear at the top of the screen. To serve them, Google receives your <strong>advertising ID</strong>, IP address (and the approximate region inferred from it), general device information, and records of ad impressions and clicks. <strong>The developer never receives this, and the location obtained by the app is never passed to advertising.</strong> You can delete or reset your advertising ID under Settings → Security &amp; privacy → More privacy settings → Ads. <strong>The app is distributed in Japan only</strong>, so no EU/UK/Swiss consent flow is bundled.</li>
@@ -397,7 +408,7 @@
   <li><strong>Children.</strong> The app is not directed to children under 13 and is listed on Google Play with a 13+ target audience.</li>
   <li><strong>Contact:</strong> <a href="mailto:primarydice@gmail.com">primarydice@gmail.com</a></li>
 </ul>
-<p>Effective date: October 24, 2026. Last updated: October 24, 2026.</p>
+<p>Effective date: October 24, 2026. Last updated: October 31, 2026.</p>
 </div>
 
 </body>
