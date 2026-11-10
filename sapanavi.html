@@ -54,16 +54,17 @@
 <p class="meta">対象アプリ: SA・PAナビ(Android アプリ)</p>
 <p class="meta">パッケージ名: <code>app.primarydice.sapanavi</code></p>
 <p class="meta">提供者(デベロッパー): Primary Dice</p>
-<p class="meta">制定日: 2026年10月24日 / 最終更新日: 2026年11月9日</p>
+<p class="meta">制定日: 2026年10月24日 / 最終更新日: 2026年11月10日</p>
 
-<p>本プライバシーポリシー(以下「本ポリシー」)は、上記提供者(以下「当方」)が提供する高速道路のサービスエリア・パーキングエリア案内アプリケーション「SA・PAナビ」(以下「本アプリ」)における、利用者の情報の取り扱いについて定めるものです。本アプリは、乗るインターチェンジ(IC)と降りる IC を選ぶと、そのあいだにあるサービスエリア・パーキングエリア(以下「SA・PA」)と、それぞれのお店・コンビニ・ガソリンスタンドを順番に示し、走行中は次の SA・PA までの距離を表示するアプリです。高速道路の道路網と SA・PA の情報はアプリ内部に同梱しており、ルートの計算も端末の中で行います(乗る IC までの一般道の道順だけは、外部の道順サーバーに問い合わせます)。本アプリをご利用いただく前に、本ポリシーをお読みください。本アプリをインストールまたはご利用になった場合、本ポリシーの内容に同意いただいたものとみなします。</p>
+<p>本プライバシーポリシー(以下「本ポリシー」)は、上記提供者(以下「当方」)が提供する高速道路のサービスエリア・パーキングエリア案内アプリケーション「SA・PAナビ」(以下「本アプリ」)における、利用者の情報の取り扱いについて定めるものです。本アプリは、乗るインターチェンジ(IC)と降りる IC を選ぶと、そのあいだにあるサービスエリア・パーキングエリア(以下「SA・PA」)と、それぞれのお店・コンビニ・ガソリンスタンドを順番に示し、走行中は次の SA・PA までの距離を表示するアプリです。高速道路の道路網と SA・PA の情報はアプリ内部に同梱しており、ルートの計算も端末の中で行います(乗る IC までと、降りる IC から目的地までの一般道の道順と、目的地にする住所・場所の検索だけは、外部のサーバーに問い合わせます)。本アプリをご利用いただく前に、本ポリシーをお読みください。本アプリをインストールまたはご利用になった場合、本ポリシーの内容に同意いただいたものとみなします。</p>
 
 <div class="box">
   <h3>このポリシーの要点(7行まとめ)</h3>
   <ul>
-    <li>アカウント登録は不要です。当方のサーバーが受け取るのは、<strong>利用者が「意見箱」で「送る」を押したときの内容</strong>と、<strong>下記の「乗る IC までの道順」を調べるときの位置(保存しません)だけ</strong>です。それ以外の操作内容や個人情報を当方へ送信することはありません。</li>
+    <li>アカウント登録は不要です。当方のサーバーが受け取るのは、<strong>利用者が「意見箱」で「送る」を押したときの内容</strong>と、<strong>下記の「一般道の道順」を調べるときの位置と、「住所・場所の検索」で入力した言葉(どちらも保存しません)だけ</strong>です。それ以外の操作内容や個人情報を当方へ送信することはありません。</li>
     <li><strong>位置情報は、ナビ(いまどこを走っているか・次の SA・PA までの距離)の計算に使います。</strong>「ナビ開始」「現在地」「目的地なしで走る」を押したときにだけ許可を求めます。<strong>ナビ中は、アプリを閉じても案内を続けるために位置情報を使い続けます</strong>(そのあいだは通知が出ていて、ナビを終えると止まります)。ナビの計算は端末の中で行い、<strong>現在地を保存することはありません。</strong>許可しなくても、ルートと SA・PA の一覧や検索はそのまま使えます。</li>
-    <li><strong>乗る IC までの道順:</strong> 高速道路の外から「現在地」でルートを出すときと、「ナビ開始」で乗る IC に向かうときに、乗る IC までの一般道を地図に表示するため、<strong>現在地(約10m に丸めた位置)と行き先(乗る IC の先の高速道路上の点)</strong>を、当方の中継サーバーを通して <strong>OpenStreetMap の道順サーバー(FOSSGIS e.V.・ドイツ)</strong>へ送ります。当方の中継サーバーには保存しません。アプリの「設定」の「乗る IC までの道順を調べる」をオフにすると、送りません。</li>
+    <li><strong>乗る IC までの道順:</strong> 高速道路の外から「現在地」でルートを出すときと、「ナビ開始」で乗る IC に向かうときに、乗る IC までの一般道を地図に表示するため、<strong>現在地(約10m に丸めた位置)と行き先(乗る IC の先の高速道路上の点)</strong>を、当方の中継サーバーを通して <strong>OpenStreetMap の道順サーバー(FOSSGIS e.V.・ドイツ)</strong>へ送ります。当方の中継サーバーには保存しません。また、<strong>住所・場所を目的地にしたとき</strong>は、降りる IC から目的地までの一般道を案内するため、<strong>目的地の位置と降りる IC の位置</strong>(降りたあと道順から外れたときは、約10m に丸めた現在地)を、同じように道順サーバーへ送ります。アプリの「設定」の「一般道の道順」をオフにすると、どちらも送りません。</li>
+    <li><strong>住所・場所の検索:</strong> 「降りる IC」の欄で「住所・場所でさがす」を押したときだけ、<strong>入力した言葉</strong>を、当方の中継サーバーを通して<strong>国土地理院の住所検索</strong>へ送り、場所の候補(名前と位置)を受け取ります。当方の中継サーバーには保存しません。</li>
     <li>端末内に保存されるのは、<strong>「よく使うルート」「一覧の見せ方」「音声案内の設定と、音声で知らせる SA・PA」「ナビ中のルート(ナビを終えると消えます)」「意見箱の書きかけ」</strong>だけです。本アプリは Android の自動バックアップと端末間コピーを<strong>両方とも無効に設定している</strong>ため、これらが Google ドライブへ保存されたり、他の端末へコピーされたりすることはありません。</li>
     <li><strong>意見箱で送った内容</strong>(種類・施設の名前・書いた文・見ていたルートの IC の名前・アプリと Android の版)は、当方のサーバーに保管し、アプリを直すためにだけ使います。<strong>名前・メールアドレス・位置情報は送られません。</strong></li>
     <li><strong>本アプリは広告を表示します。</strong>広告は Google の配信サービス(Google AdMob)によるもので、広告を出すために Google が<strong>広告 ID</strong> などを取得します。<strong>位置情報が広告に使われることはありません。</strong></li>
@@ -122,9 +123,9 @@
       <td class="wrap"><strong>保存しません。</strong>ナビの計算をするあいだ、アプリの動作中のメモリ上にあるだけで、端末にも当方にも記録されません。乗る IC までの道順を調べるときだけ、丸めた位置を道順サーバーへ送ります(次の行)。</td>
     </tr>
     <tr>
-      <td class="wrap">乗る IC までの道順を調べるときに送る情報</td>
+      <td class="wrap">一般道の道順を調べるときに送る情報(乗る IC まで・降りる IC から目的地まで)</td>
       <td class="wrap">現在地を約10m に丸めた緯度・経度と、行き先(乗る IC の先の、高速道路上の点)の緯度・経度・進む向き</td>
-      <td class="wrap"><strong>アプリの「設定」の「乗る IC までの道順を調べる」がオンのとき(最初はオン)に</strong>、高速道路の外から「現在地」でルートを出したとき、および「ナビ開始」のあと乗る IC に向かっているあいだ(道順から外れたときは、1分に1回まで調べ直します)</td>
+      <td class="wrap"><strong>アプリの「設定」の「乗る IC までの道順を調べる」がオンのとき(最初はオン)に</strong>、高速道路の外から「現在地」でルートを出したとき、および「ナビ開始」のあと乗る IC に向かっているあいだ。住所・場所を目的地にしたときは、ルートを出したときと、高速を降りたあと目的地に向かっているあいだ(道順から外れたときは、1分に1回まで調べ直します)</td>
       <td class="wrap">当方の中継サーバー(Cloudflare のサービスを利用)を通して、道順サーバー(FOSSGIS e.V.)へ送り、道順を受け取ります。<strong>当方の中継サーバーには保存しません。</strong>受け取った道順は端末内のナビ中のルートと一緒に保持され、ナビを終えると消去されます。</td>
     </tr>
     <tr>
@@ -139,18 +140,19 @@
 <div class="box note">
   <h3>位置情報の取り扱いについて</h3>
   <p>本アプリが現在地を使うのは、<strong>ナビのため</strong>です。具体的には、ルートのどこを走っているか、次の SA・PA・ガソリンスタンド・降りる IC までの距離、ルートを外れたときの引き直し、音声案内を読み上げる時機を、端末の中で計算するために使います。「現在地」を押したときは、いまの場所から乗れる高速道路(高速道路の外にいるときは、近くの乗る IC)を探してルートを作るために使います。また、乗る IC までの一般道の道順を地図に表示するために使います。それ以外の使い道はありません。</p>
-  <p>これらの計算は端末の中で行います。現在地を外へ送るのは、<strong>乗る IC までの一般道の道順を調べるときだけ</strong>です(下記)。意見箱で送る内容に、位置情報は含まれません。また、現在地を保存することはしないため、走った道の履歴が蓄積されることもありません。</p>
+  <p>これらの計算は端末の中で行います。現在地を外へ送るのは、<strong>一般道の道順(乗る IC まで・降りる IC から目的地まで)を調べるときだけ</strong>です(下記)。意見箱で送る内容に、位置情報は含まれません。また、現在地を保存することはしないため、走った道の履歴が蓄積されることもありません。</p>
   <p><strong>ナビ中にアプリを閉じたとき:</strong> ホームに戻る・ほかのアプリに切り替える・画面を消す・最近使ったアプリの一覧から消す、のいずれをしても、ナビを終えるまでは案内(通知の距離の表示と音声案内)を続けるために現在地を使います。このあいだは通知が出ていて、通知の「ナビを終了」からいつでも止められます(通知を許可していない場合は通知が見えないので、アプリを開いて「終了」を押してください)。アプリを閉じたままルートの終わりに着いたときや、2時間進まなかったときは、自動で止まります。<strong>ナビをしていないときに、アプリを閉じたまま現在地を使うことはありません。</strong></p>
   <p><strong>現在地の周辺が第三者に伝わるのは、次の場面だけです。</strong></p>
   <ul>
     <li><strong>ナビ中に地図が現在地の周りを表示するとき:</strong> その辺りの地図の画像(タイル)を国土地理院の地図配信サーバーから取り寄せるため、どの辺りの地図を表示しているか(区画の番号)が国土地理院に伝わります。緯度・経度そのものは送られません。</li>
-    <li><strong>乗る IC までの道順を調べるとき:</strong> 現在地を約10m に丸めた緯度・経度と行き先が、当方の中継サーバーを通して、OpenStreetMap の道順サーバー(ドイツの非営利団体 FOSSGIS e.V. が運営する routing.openstreetmap.de)に伝わります。道順サーバーへは当方の中継サーバーから問い合わせるため、利用者の IP アドレスは道順サーバーに伝わりません。アプリの「設定」の「乗る IC までの道順を調べる」をオフにすると送られず、乗る IC まではまっすぐの距離だけを表示します。</li>
+    <li><strong>乗る IC までの道順を調べるとき:</strong> 現在地を約10m に丸めた緯度・経度と行き先が、当方の中継サーバーを通して、OpenStreetMap の道順サーバー(ドイツの非営利団体 FOSSGIS e.V. が運営する routing.openstreetmap.de)に伝わります。道順サーバーへは当方の中継サーバーから問い合わせるため、利用者の IP アドレスは道順サーバーに伝わりません。アプリの「設定」の「一般道の道順」をオフにすると送られず、乗る IC まで・目的地まではまっすぐの距離だけを表示します。</li>
+    <li><strong>住所・場所を目的地にしたとき:</strong> 降りる IC から目的地までの道順を調べるため、目的地の位置と降りる IC の位置が、同じように道順サーバーに伝わります。目的地をさがすときに入力した言葉は、当方の中継サーバーを通して国土地理院の住所検索に伝わります(当方には保存しません)。</li>
   </ul>
   <p style="margin-bottom:0"><strong>位置情報を許可しなくても、ルートの作成、SA・PA とお店・ガソリンスタンドの一覧、検索、地図はそのままご利用いただけます。</strong>使えなくなるのは、ナビ(走りながらの距離の表示と音声案内)と「現在地」「目的地なしで走る」だけです。</p>
 </div>
 
 <h3>SA・PA と道路のデータについて</h3>
-<p>本アプリが表示する高速道路の道路網、IC・ジャンクション、SA・PA の位置、お店・コンビニ・ガソリンスタンドの情報は、<a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> の公開データ、国土交通省の国土数値情報、各高速道路会社の公式サイトおよびガソリンスタンドの営業会社の公式の店舗検索に掲載されている事実(店名・種類・営業時間・看板・営業会社など)をもとに、当方があらかじめ整えて<strong>アプリ内部に同梱している</strong>ものです。利用者がルートを作ったり検索したりしても、その内容が外部へ送信されることはありません(乗る IC までの一般道の道順を調べるときに、現在地と行き先を送ることだけを除きます)。</p>
+<p>本アプリが表示する高速道路の道路網、IC・ジャンクション、SA・PA の位置、お店・コンビニ・ガソリンスタンドの情報は、<a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> の公開データ、国土交通省の国土数値情報、各高速道路会社の公式サイトおよびガソリンスタンドの営業会社の公式の店舗検索に掲載されている事実(店名・種類・営業時間・看板・営業会社など)をもとに、当方があらかじめ整えて<strong>アプリ内部に同梱している</strong>ものです。利用者がルートを作ったり検索したりしても、その内容が外部へ送信されることはありません(一般道の道順を調べるときに現在地と行き先を送ることと、住所・場所の検索で入力した言葉を送ることだけを除きます)。</p>
 
 <h3>音声案内について</h3>
 <p>ナビ中の音声案内(「2キロ先、◯◯サービスエリアです。」など)は、端末に入っている Android の読み上げ機能(音声合成エンジン)を使って読み上げます。読み上げるのは本アプリが作る決まった文(SA・PA・ジャンクション・IC の名前)だけで、利用者の個人情報は含まれません。読み上げ機能は端末のメーカーや Google などが提供するもので、その動作は提供元の規約・ポリシーによります。</p>
@@ -171,6 +173,7 @@
 <ul>
   <li>利用者が求めたときに、ナビ(現在地からの距離の表示・ルートの引き直し・音声案内)を行うため</li>
   <li>乗る IC を探し、そこまでの一般道の道順を地図に表示するため</li>
+  <li>住所・場所を目的地にしたとき、降りる IC を探し、そこから目的地までの一般道を案内するため</li>
   <li>よく使うルートを、次回からすぐ選べるようにするため</li>
   <li>利用者が選んだ一覧の見せ方と音声案内の設定を、次回も同じにするため</li>
   <li>意見箱に書いた文を、送り終えるまで失わないようにするため</li>
@@ -191,7 +194,7 @@
 
 <h3>本アプリ自身が使用するその他の権限</h3>
 <ul>
-  <li><code>INTERNET</code>(インターネット通信) — 地図の画像を取得し、広告を読み込み、意見箱の内容を送り、乗る IC までの道順を調べるために使用します。<strong>本アプリ自身の通信で現在地を送るのは、乗る IC までの道順を調べるときだけです</strong>(約10m に丸めます。設定でオフにできます)。</li>
+  <li><code>INTERNET</code>(インターネット通信) — 地図の画像を取得し、広告を読み込み、意見箱の内容を送り、乗る IC までの道順を調べるために使用します。<strong>本アプリ自身の通信で現在地を送るのは、一般道の道順を調べるときだけです</strong>(約10m に丸めます。設定でオフにできます)。住所・場所の検索では、入力した言葉を送ります。</li>
   <li><code>FOREGROUND_SERVICE</code> / <code>FOREGROUND_SERVICE_LOCATION</code>(フォアグラウンドサービス) — ナビ中にアプリを閉じても案内を続けるために使用します。動くのはナビ中だけです。</li>
   <li><code>POST_NOTIFICATIONS</code>(通知) — ナビ中に、次の SA・PA までの距離と「ナビを終了」のボタンを通知に出すために使用します。「ナビ開始」などを押したときに許可を求めます。許可しなくてもナビは動きますが、通知は見えません。</li>
   <li><code>WAKE_LOCK</code>(スリープの防止) — ナビ中に画面を消しても、案内が途中で止まらないようにするために使用します。</li>
@@ -231,8 +234,13 @@
     </tr>
     <tr>
       <td class="wrap">当方の中継サーバー(同上)を通して、OpenStreetMap の道順サーバー<br>(routing.openstreetmap.de。ドイツの FOSSGIS e.V. が運営)</td>
-      <td class="wrap">乗る IC までの一般道の道順を調べるため</td>
-      <td class="wrap"><strong>設定の「乗る IC までの道順を調べる」がオンのときに</strong>、現在地を約10m に丸めた緯度・経度と、行き先(高速道路上の点)の緯度・経度・進む向きを送ります。中継サーバーは受け取った位置を保存せず、道順サーバーへ渡して、返ってきた道順をアプリへ返すだけです。いたずらで大量に呼ばれるのを防ぐために IP アドレスで回数を数えますが、IP アドレスは保存しません(1日ごとに変わる合言葉と混ぜた、元に戻せない符号で数えます)。道順サーバーには当方の中継サーバーから問い合わせるため、利用者の IP アドレスは伝わりません。</td>
+      <td class="wrap">一般道の道順(乗る IC まで・降りる IC から目的地まで)を調べるため</td>
+      <td class="wrap"><strong>設定の「乗る IC までの道順を調べる」がオンのときに</strong>、現在地を約10m に丸めた緯度・経度と、行き先(高速道路上の点)の緯度・経度・進む向きを送ります。中継サーバーは受け取った位置を保存せず、道順サーバーへ渡して、返ってきた道順をアプリへ返すだけです。いたずらで大量に呼ばれるのを防ぐために IP アドレスで回数を数えますが、IP アドレスは保存しません(1日ごとに変わる合言葉と混ぜた、元に戻せない符号で数えます)。道順サーバーには当方の中継サーバーから問い合わせるため、利用者の IP アドレスは伝わりません。住所・場所を目的地にしたときは、目的地と降りる IC の緯度・経度・進む向きも同じように送ります。</td>
+    </tr>
+    <tr>
+      <td class="wrap">当方の中継サーバー(同上)を通して、国土地理院の住所検索<br>(地理院地図の検索と同じもの)</td>
+      <td class="wrap">目的地にする住所・場所をさがすため</td>
+      <td class="wrap">「住所・場所でさがす」を押したときだけ、入力した言葉を送り、場所の候補(名前と位置)を受け取ります。中継サーバーは言葉を保存しません。国土地理院へは当方の中継サーバーから問い合わせるため、利用者の IP アドレスは伝わりません。</td>
     </tr>
     <tr>
       <td class="wrap">Google の広告配信サーバー<br>(Google AdMob / Google Mobile Ads)</td>
@@ -298,7 +306,7 @@
 <p>将来これらの地域へ配信を広げる場合は、同意画面を組み込んだうえで、本ポリシーを改定し、ページ上部の「最終更新日」を更新します。</p>
 
 <h3>当方が行わないこと</h3>
-<p>当方は、本アプリで取り扱う情報を、法令に基づく場合と、乗る IC までの道順を調べるために丸めた現在地と行き先を道順サーバー(FOSSGIS e.V.)へ渡す場合を除き、第三者に提供・開示・販売・貸与することはありません。当方が保管するのは意見箱で送られた内容だけで、これも上記「5. 意見箱について」の目的にのみ使います。</p>
+<p>当方は、本アプリで取り扱う情報を、法令に基づく場合と、乗る IC までの道順を調べるために丸めた現在地と行き先を道順サーバー(FOSSGIS e.V.)へ渡す場合と、住所・場所の検索で入力した言葉を国土地理院の住所検索へ渡す場合を除き、第三者に提供・開示・販売・貸与することはありません。当方が保管するのは意見箱で送られた内容だけで、これも上記「5. 意見箱について」の目的にのみ使います。</p>
 <p>上記の広告配信を除き、本アプリは以下を行いません。</p>
 <ul>
   <li>アクセス解析ツール(Google アナリティクス等)の組み込み</li>
@@ -328,7 +336,7 @@
     </tr>
     <tr>
       <td class="wrap">OpenStreetMap の道順サーバー(<a href="https://routing.openstreetmap.de/about.html" target="_blank" rel="noopener">routing.openstreetmap.de</a>・OSRM。ドイツの非営利団体 FOSSGIS e.V. が運営)</td>
-      <td class="wrap">乗る IC までの一般道の道順の計算</td>
+      <td class="wrap">一般道の道順(乗る IC まで・降りる IC から目的地まで)の計算</td>
       <td class="wrap">設定の「乗る IC までの道順を調べる」がオンのときだけ、約10m に丸めた現在地と行き先が、当方の中継サーバーを通して送信されます(利用者の IP アドレスは伝わりません)。ドイツのサーバーで処理されます。取り扱いについては<a href="https://www.fossgis.de/datenschutzerkl%C3%A4rung/" target="_blank" rel="noopener">FOSSGIS e.V. のプライバシーポリシー(ドイツ語)</a>をご参照ください。</td>
     </tr>
     <tr>
@@ -362,7 +370,7 @@
 
 <h2>8. データの保持期間と削除方法</h2>
 <ul>
-  <li><strong>位置情報:</strong> そもそも保存していません。ナビを終了すれば、それ以上どこにも残りません。乗る IC までの道順を調べるときに送った位置も、当方の中継サーバーには保存しません(道順サーバーでの取り扱いは、FOSSGIS e.V. のプライバシーポリシーによります)。位置情報の許可そのものを取り消したい場合は、端末の「設定」→「アプリ」→「SA・PAナビ」→「権限」→「位置情報」から、いつでも「許可しない」に変更できます。</li>
+  <li><strong>位置情報:</strong> そもそも保存していません。ナビを終了すれば、それ以上どこにも残りません。一般道の道順を調べるときに送った位置と、住所・場所の検索で送った言葉も、当方の中継サーバーには保存しません(道順サーバーでの取り扱いは、FOSSGIS e.V. のプライバシーポリシーによります)。位置情報の許可そのものを取り消したい場合は、端末の「設定」→「アプリ」→「SA・PAナビ」→「権限」→「位置情報」から、いつでも「許可しない」に変更できます。</li>
   <li><strong>ナビ中のルート:</strong> ナビを終えると自動で消去されます。</li>
   <li><strong>よく使うルート:</strong> 一覧の「×」で1件ずつ消せます。</li>
   <li><strong>音声で知らせる SA・PA:</strong> 音声案内の画面の「外す」で消せます。</li>
@@ -416,6 +424,7 @@
 <p>This is an English summary of the privacy policy for <strong>SA・PA Navi</strong> (Japanese title: SA・PAナビ, package <code>app.primarydice.sapanavi</code>), an Android app provided by <strong>Primary Dice</strong> ("the developer") that lists the service and parking areas (SA/PA) on Japanese expressways between two interchanges, together with their shops, convenience stores and fuel stations, and shows the distance to the next SA/PA while driving. The road network and the SA/PA data are bundled inside the app, and routes are calculated on the device. The Japanese text above is the authoritative version.</p>
 <ul>
   <li><strong>No account, minimal server use.</strong> The developer's server only receives what you send through the in-app <strong>feedback box</strong> when you tap "Send", and the rounded location used to look up the route to the entry interchange (see below; not stored). Nothing else you do in the app is transmitted to the developer.</li>
+  <li><strong>Address and place search.</strong> Only when you tap "Search address/place" in the exit field, the words you typed are sent through the developer's relay server to the address search of the Geospatial Information Authority of Japan (GSI), and place candidates (names and positions) are returned. The relay server does not store them. When you choose an address or place as the destination, the destination and exit interchange positions (and, after leaving the expressway, your rounded current location if you go off the route) are also sent to the routing server below to guide you on ordinary roads to the destination.</li>
   <li><strong>Route to the entry interchange.</strong> When you create a route with "Current location" while off the expressway, or head for the entry interchange after tapping "Start navigation", the app shows the ordinary-road route to the interchange on the map. For this, it sends your <strong>current location rounded to about 10 m</strong> and the destination point (on the expressway just past the interchange) through the developer's relay server (Cloudflare) to the <strong>OpenStreetMap routing server run by FOSSGIS e.V. (Germany)</strong>. The relay server does not store it, and your IP address is not passed to the routing server. You can turn this off in the app's Settings ("Look up the route to the entry interchange"); then nothing is sent and only the straight-line distance is shown.</li>
   <li><strong>Location is otherwise kept on your device.</strong> The app asks for location permission <strong>only when you tap "Start navigation", "Current location" or "Drive without destination"</strong>, and uses it to compute where you are on the route, distances to the next SA/PA, fuel station and exit, re-routing, the timing of voice guidance, and the route to the entry interchange described above. Apart from that lookup, location is <strong>never sent, never included in feedback, and never stored</strong>. Map tiles are fetched from the Geospatial Information Authority of Japan (GSI), which necessarily reveals <strong>which map area is on screen</strong> (as tile numbers); your actual coordinates are not sent. During navigation only, guidance keeps running after you close the app, using an Android foreground service with a notification that lets you stop it at any time; it stops by itself when you reach the end of the route. The app does not request the "Allow all the time" background location permission and never uses location with the app closed when navigation is not running. <strong>Declining is fine</strong>: routes, SA/PA lists, search and the map all keep working; only navigation is unavailable.</li>
   <li><strong>What is stored on your device.</strong> Your frequently used routes (interchange names and positions, use count, last use, a "pin" flag; up to 30), the list view you chose, voice-guidance settings and the SA/PAs you asked to be announced, the route of a navigation in progress (deleted when navigation ends), and an unsent feedback draft. Android Auto Backup and device-to-device transfer are <strong>both disabled</strong>, so none of this is copied to Google Drive or another device.</li>
@@ -429,7 +438,7 @@
   <li><strong>Children.</strong> The app is not directed to children under 13 and is listed on Google Play with a 13+ target audience.</li>
   <li><strong>Contact:</strong> <a href="mailto:primarydice@gmail.com">primarydice@gmail.com</a></li>
 </ul>
-<p>Effective date: October 24, 2026. Last updated: November 9, 2026.</p>
+<p>Effective date: October 24, 2026. Last updated: November 10, 2026.</p>
 </div>
 
 </body>
